@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PHP on KID's Blog</title><link>https://blog.kid7.club/categories/php/</link><description>Recent content in PHP on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kid7.club/categories/php/index.xml" rel="self" type="application/rss+xml"/><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>安裝 安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）
+https://github.com/squizlabs/PHP_CodeSniffer
+1 composer global require &amp;#34;squizlabs/php_codesniffer=*&amp;#34; 確認指令可用
+1 2 phpcs --version phpcbf --version 使用 phpcs 檢查錯誤
+phpcs &amp;lt;檔案/資料夾&amp;gt; 自動修正錯誤
+1 phpcbf &amp;lt;檔案/資料夾&amp;gt; 自訂驗證標準 使用 phpcs 時，可自訂驗證使用標準（如：PSR-2，或自己撰寫的定義檔等） 若未指定，將預設嘗試抓取 phpcs.xml 作為標準
+1 2 phpcs --standard=PSR2 phpcs --standard=/path/to/custom_ruleset.xml 於 PhpStorm 使用 phpcs 設定 Code Sniffier
+Settings → Languages &amp;amp; Frameworks → PHP → Quality Tools → Code Sniffier Configuration 設定為 Local，點擊右側「…」</description></item><item><title>在 Windows 的 XAMPP 安裝 Imagick 擴充套件</title><link>https://blog.kid7.club/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</link><pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</guid><description> 檢視 XAMPP 的 phpinfo()，確認以下項目 Architecture：x86 / x64 Thread Safety：enabled / disabled Compiler：如 MSVC15 (Visual C++ 2017) 到 PECL Deps 查看對應以上 Architecture 與 Compiler 對應的 ImageMagick 版本 如 ImageMagick-7.0.7-11-vc15-x64.zip 則為 7.0.7 根據以下文章進行安裝，唯各步驟須注意使用上述版本 How to install and enable the Imagick extension in XAMPP for Windows 若第一步驟找不到對應版本的 ImageMagick，可到這裡下載</description></item><item><title>XAMPP 安裝 PHP_CodeSniffer</title><link>https://blog.kid7.club/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</guid><description>2019-10-06 更新：
+此篇為舊筆記
+現已不建議使用 pear 安裝，建議直接使用 Composer 安裝全域套件
+1 composer global require &amp;#34;squizlabs/php_codesniffer=*&amp;#34; 使用 XAMPP 時，
+若需安裝 PHP_CodeSniffer，
+一般會使用 PEAR 的安裝方案
+1 pear install PHP_CodeSniffer 但很可能出現以下錯誤
+Cannot use result of built-in function in write context in D:\xampp\php\pear\Archive\Tar.php on line 639 解決方案：
+進入檔案，將該行由 1 $v_att_list = &amp;amp; func_get_args(); 改為
+1 $v_att_list = func_get_args(); 重新安裝 Archive_Tar 1 pear install Archive_Tar 重新安裝 PHP_CodeSniffer pear install PHP_CodeSniffer</description></item></channel></rss>
