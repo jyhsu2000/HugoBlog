@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LINE Bot on KID's Blog</title><link>https://blog.kid7.club/tags/line-bot/</link><description>Recent content in LINE Bot on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kid7.club/tags/line-bot/index.xml" rel="self" type="application/rss+xml"/><item><title>讓 LINE 以外部瀏覽器開啟超連結</title><link>https://blog.kid7.club/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</guid><description>LINE 預設會以 in-app 的瀏覽器開啟超連結，但這種開啟方式卻容易使網頁的功能受限（排版崩壞、JS 無法正常運作等）
+若能以外部瀏覽器開啟超連結，該問題便能被克服。
+註：以下方法不僅限於使用訊息傳送的網址，透過 LINE 掃描的 QR 碼中所帶的網址亦有相同效果
+其實應對方式很簡單 針對我們需要讓使用者使用外部瀏覽器開啟的超連結 加上 ?openExternalBrowser=1 參數即可
+例如原本網址為
+https://wp.kid7.club/ 加上參數，變為以下網址
+https://wp.kid7.club/?openExternalBrowser=1 如此便能使在 LINE 中點擊網址的使用者直接以外部瀏覽器開啟超連結
+參考資料 LINE BOT Development Guidelines （P.52）</description></item></channel></rss>

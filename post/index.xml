@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on KID's Blog</title><link>https://blog.kid7.club/post/</link><description>Recent content in Posts on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kid7.club/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, world!</title><link>https://blog.kid7.club/p/hello-world/</link><pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/hello-world/</guid><description>在 Hugo 的第一篇文章
 ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡
 接下來會試著
-把之前在 WordPress 上的文章都搬過來</description></item><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>安裝 安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）
+把之前在 WordPress 上的文章都搬過來</description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.kid7.club/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5rpython-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5rpython-pandas/</guid><description>資料處理時，常需要將時間轉換為接近的整點，
+如：9:47 轉換為 10:00；14:03 轉換為 14:00
+或是以 15 分鐘為區間，
+如：9:47 轉換為 9:45、5:23 轉換為 5:30
+以下分別介紹 R 與 Python 兩種語言的處理方式
+R 使用 lubridate 套件中的 round_date（四捨五入）、floor_date（向下取整）、ceiling_date（向上取整）
+三者皆可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值
+1 2 3 4 5 6 7 8 9 10 11 12 13 x &amp;lt;- as.POSIXct(&amp;#34;2017-10-11 09:49:03&amp;#34;) lubridate::round_date(x, &amp;#34;5 minute&amp;#34;) # 2017-10-11 09:50:00 lubridate::round_date(x, &amp;#34;10 minute&amp;#34;) # 2017-10-11 09:50:00 lubridate::round_date(x, &amp;#34;hour&amp;#34;) # 2017-10-11 10:00:00 lubridate::floor_date(x, &amp;#34;5 minute&amp;#34;) # 2017-10-11 09:45:00 lubridate::floor_date(x, &amp;#34;10 minute&amp;#34;) # 2017-10-11 09:40:00 lubridate::floor_date(x, &amp;#34;hour&amp;#34;) # 2017-10-11 10:00:00 lubridate::ceiling_date(x, &amp;#34;5 minute&amp;#34;) # 2017-10-11 09:50:00 lubridate::ceiling_date(x, &amp;#34;10 minute&amp;#34;) # 2017-10-11 09:50:00 lubridate::ceiling_date(x, &amp;#34;hour&amp;#34;) # 2017-10-11 10:00:00 Python Python 本身較難處理這類情況，因此會使用 Pandas 套件中 pandas.</description></item><item><title>讓 LINE 以外部瀏覽器開啟超連結</title><link>https://blog.kid7.club/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</guid><description>LINE 預設會以 in-app 的瀏覽器開啟超連結，但這種開啟方式卻容易使網頁的功能受限（排版崩壞、JS 無法正常運作等）
+若能以外部瀏覽器開啟超連結，該問題便能被克服。
+註：以下方法不僅限於使用訊息傳送的網址，透過 LINE 掃描的 QR 碼中所帶的網址亦有相同效果
+其實應對方式很簡單 針對我們需要讓使用者使用外部瀏覽器開啟的超連結 加上 ?openExternalBrowser=1 參數即可
+例如原本網址為
+https://wp.kid7.club/ 加上參數，變為以下網址
+https://wp.kid7.club/?openExternalBrowser=1 如此便能使在 LINE 中點擊網址的使用者直接以外部瀏覽器開啟超連結
+參考資料 LINE BOT Development Guidelines （P.52）</description></item><item><title>使用 SNMP 進行系統監控</title><link>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>監控端 使用 Docker 版，以簡化佈署複雜度
+https://github.com/setiseta/docker-librenms
+調整 docker-compose.yml
+修改 port
+修改時區為 Asia/Taipei（兩處） 使用 docker-compose 佈署上述容器 進入修改帳號密碼（預設帳號/密碼：librenms） 根據需求於 HTTP server 設定反向代理 被監控端 安裝 snmpd 與 snmp（前者為服務本身，後者則包含 snmpwalk 等指令集）
+1 sudo apt install snmpd snmp 從本機測試連線
+1 snmpwalk -v 2c -c public localhost 修改 /etc/snmp/snmpd.conf
+修改 agentAddress，使其能從遠端被訪問（存取控制則由防火牆直接管理） # 將 agentAddress udp:127.0.0.1:161 # 修改為 agentAddress udp:161 修改資料收集範圍（參考 IDC 設定方式） # 將 view systemonly included .</description></item><item><title>測試檔案讀寫速度</title><link>https://blog.kid7.club/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</guid><description>可用於測試本機速度、NFS 速度等
+請先以 cd 指令切換至欲測試的路徑
+測試檔案寫入速度 1 time dd if=/dev/zero of=testfile bs=16k count=128k 測試檔案讀取速度 1 time dd if=testfile of=/dev/null bs=16k 參考資料 performance – Measure &amp;amp; benchmark the speed &amp;amp; latency of file access on a mounted NFS share – Server Fault</description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.kid7.club/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>帳號停用 將帳號設定為昨天過期
+1 sudo usermod -e $(date -d &amp;#34;yesterday&amp;#34; +&amp;#34;%Y-%m-%d&amp;#34;) &amp;lt;user&amp;gt; 確認帳號期限
+1 sudo chage -l &amp;lt;user&amp;gt; 封存家目錄
+1 2 3 4 cd /home sudo tar -I pigz -p -cvf &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt; # 或以下 sudo tar czvfp &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt; In addition, when doing a tar backup, it’s also good to add the following flags : p &amp;amp; (z/j)</description></item><item><title>Python 測試程式碼片段執行時間</title><link>https://blog.kid7.club/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</link><pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</guid><description>測試 Python 的程式碼片段實際執行所需秒數
+1 2 3 4 5 6 7 import time start = time.perf_counter() # Do something end = time.perf_counter() elapsed = end - start print(&amp;#34;elapsed:&amp;#34;, elapsed) 參考資料 time — Time access and conversions — Python 3 documentation</description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>前置處理 已連接 APC UPS，並於機器中安裝 apcupsd 向 @BotFather 申請 Telegram Bot，並取得 token 安裝能夠透過 CLI 呼叫 Telegram Bot API 的工具
+（以下以 TelegramBotCli 為例） 設定流程 確認已完成 apcupsd 的設定，並能透過已下指令順利存取 UPS 狀態
+apcaccess status 在 Terminal 開著的情況下，測試 UPS 能否順利偵測事件並發送通知
+（拔插頭看有沒有看到訊息之類的）
+進入 /etc/apcupsd，可以看到一些檔案
+apccontrol 是整個核心部分，有興趣可以看看，但官方警告不要修改這個
+於是我們要修改的是根據不同事件各自獨立的處理流程檔案
+開啟事件處理流程檔案，如 offbattery、onbattery、commfailure、commok 等我們希望收到通知的事件，預設應該會是類似以下內容
+主要是在事件發生時，先整理需要的訊息，並以管線轉送給設定好的通知程序，進行通知發送的動作
+其中第 16 行管線後的部分，即為我們希望修改的訊息轉送動作
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #!</description></item><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>安裝 安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）
 https://github.com/squizlabs/PHP_CodeSniffer
 1 composer global require &amp;#34;squizlabs/php_codesniffer=*&amp;#34; 確認指令可用
 1 2 phpcs --version phpcbf --version 使用 phpcs 檢查錯誤
