@@ -1,5 +1,6 @@
 ---
 title: 時間的四捨五入（R、Python Pandas）
+slug: 時間的四捨五入-r-python-pandas
 date: 2021-03-04
 categories:
     - Python
