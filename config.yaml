@@ -147,3 +147,4 @@ related:
 markup:
     highlight:
         noClasses: false
+        lineNos: true
