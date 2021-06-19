@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.kid7.club/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kid7.club/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, Hugo!</title><link>https://blog.kid7.club/p/hello-hugo/</link><pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/hello-hugo/</guid><description>&lt;p>在 Hugo 的第一篇文章&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, Hugo!</title><link>https://blog.jyhsu.tw/p/hello-hugo/</link><pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/hello-hugo/</guid><description>&lt;p>在 Hugo 的第一篇文章&lt;br>
 ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡&lt;/p>
 &lt;p>總之先試著&lt;br>
 把之前在 WordPress 上的文章都搬過來了&lt;/p>
@@ -8,7 +8,7 @@
 >Hugo: The world&amp;rsquo;s fastest framework for building websites&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener"
 >GitHub Actions for Hugo&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.kid7.club/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>&lt;p>資料處理時，常需要將時間轉換為接近的整點，&lt;br>
+&lt;/ul></description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>&lt;p>資料處理時，常需要將時間轉換為接近的整點，&lt;br>
 如：9:47 轉換為 10:00；14:03 轉換為 14:00&lt;/p>
 &lt;p>或是以 15 分鐘為區間，&lt;br>
 如：9:47 轉換為 9:45、5:23 轉換為 5:30&lt;/p>
@@ -83,7 +83,7 @@
 &lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>讓 LINE 以外部瀏覽器開啟超連結</title><link>https://blog.kid7.club/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</guid><description>&lt;p>LINE 預設會以 in-app 的瀏覽器開啟超連結，但這種開啟方式卻容易使網頁的功能受限（排版崩壞、JS 無法正常運作等）&lt;br>
+&lt;/div></description></item><item><title>讓 LINE 以外部瀏覽器開啟超連結</title><link>https://blog.jyhsu.tw/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</guid><description>&lt;p>LINE 預設會以 in-app 的瀏覽器開啟超連結，但這種開啟方式卻容易使網頁的功能受限（排版崩壞、JS 無法正常運作等）&lt;br>
 若能以外部瀏覽器開啟超連結，該問題便能被克服。&lt;/p>
 &lt;p>&lt;strong>註：以下方法不僅限於使用訊息傳送的網址，透過 LINE 掃描的 QR 碼中所帶的網址亦有相同效果&lt;/strong>&lt;/p>
 &lt;p>其實應對方式很簡單
@@ -98,7 +98,7 @@
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://developers.line.biz/media/partner-docs/LINE_BOT_Development_Guidelines.pdf" target="_blank" rel="noopener"
 >LINE BOT Development Guidelines&lt;/a> （P.52）&lt;/li>
-&lt;/ul></description></item><item><title>使用 SNMP 進行系統監控</title><link>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>&lt;h1 id="監控端">監控端&lt;/h1>
+&lt;/ul></description></item><item><title>使用 SNMP 進行系統監控</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>&lt;h1 id="監控端">監控端&lt;/h1>
 &lt;p>使用 Docker 版，以簡化佈署複雜度&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/setiseta/docker-librenms" target="_blank" rel="noopener"
 >https://github.com/setiseta/docker-librenms&lt;/a>&lt;/p>
@@ -220,7 +220,7 @@ BEGIN failed--compilation aborted at ./fail2ban line 80.
 &lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo apt install libjson-perl
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>測試檔案讀寫速度</title><link>https://blog.kid7.club/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</guid><description>&lt;p>可用於測試本機速度、NFS 速度等&lt;br>
+&lt;/div></description></item><item><title>測試檔案讀寫速度</title><link>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</guid><description>&lt;p>可用於測試本機速度、NFS 速度等&lt;br>
 請先以 &lt;code>cd&lt;/code> 指令切換至欲測試的路徑&lt;/p>
 &lt;h1 id="測試檔案寫入速度">測試檔案寫入速度&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -244,7 +244,7 @@ BEGIN failed--compilation aborted at ./fail2ban line 80.
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://serverfault.com/questions/324438/measure-benchmark-the-speed-latency-of-file-access-on-a-mounted-nfs-share/324489#324489" target="_blank" rel="noopener"
 >performance – Measure &amp;amp; benchmark the speed &amp;amp; latency of file access on a mounted NFS share – Server Fault&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.kid7.club/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>&lt;h1 id="帳號停用">帳號停用&lt;/h1>
+&lt;/ul></description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>&lt;h1 id="帳號停用">帳號停用&lt;/h1>
 &lt;p>將帳號設定為昨天過期&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -345,7 +345,7 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 >How can I create automatically expiring user accounts? – Unix &amp;amp; Linux Stack Exchange&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://mylinuxramblings.wordpress.com/2010/01/10/how-to-backup-and-restore-your-home-directory/" target="_blank" rel="noopener"
 >How to Backup and Restore your Home directory | MyLinuxRamblings&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Python 測試程式碼片段執行時間</title><link>https://blog.kid7.club/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</link><pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</guid><description>&lt;p>測試 Python 的程式碼片段實際執行所需秒數&lt;/p>
+&lt;/ul></description></item><item><title>Python 測試程式碼片段執行時間</title><link>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</link><pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</guid><description>&lt;p>測試 Python 的程式碼片段實際執行所需秒數&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
@@ -369,7 +369,7 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://docs.python.org/3/library/time.html" target="_blank" rel="noopener"
 >time — Time access and conversions — Python 3 documentation&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>&lt;h1 id="前置處理">前置處理&lt;/h1>
+&lt;/ul></description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>&lt;h1 id="前置處理">前置處理&lt;/h1>
 &lt;ul>
 &lt;li>已連接 APC UPS，並於機器中安裝 &lt;a class="link" href="http://www.apcupsd.org/" target="_blank" rel="noopener"
 >apcupsd&lt;/a>&lt;/li>
@@ -480,7 +480,7 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 >APCUPSD User Manual&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://blog.sean.taipei/2017/05/telegram-bot" target="_blank" rel="noopener"
 >從零開始的 Telegram Bot | Sean’s Note&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
+&lt;/ul></description></item><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
 &lt;ol>
 &lt;li>
 &lt;p>安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）&lt;br>
@@ -540,8 +540,8 @@ phpcs --standard&lt;span class="o">=&lt;/span>/path/to/custom_ruleset.xml
 &lt;code>Settings&lt;/code> → &lt;code>Languages &amp;amp; Frameworks&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>Code Sniffier&lt;/code>
 Configuration 設定為 Local，點擊右側「…」&lt;br>
 &lt;figure style="flex-grow: 272; flex-basis: 654px">
-&lt;a href="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png" data-size="763x280">&lt;img src="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png"
-srcset="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_2.png 480w, https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_2.png 1024w"
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png" data-size="763x280">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_2.png 1024w"
 width="763"
 height="280"
 loading="lazy"
@@ -552,8 +552,8 @@ loading="lazy"
 Path to phpcbf 填入任意字串，只要不是空白的，PhpStorm 就會自動去抓全域的 &lt;code>phpcbf&lt;/code>&lt;br>
 （這種設定方式會使得無法使用 &lt;code>Validate&lt;/code> 進行驗證，但不影響使用）&lt;br>
 &lt;figure style="flex-grow: 446; flex-basis: 1071px">
-&lt;a href="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png" data-size="826x185">&lt;img src="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png"
-srcset="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_2.png 480w, https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_2.png 1024w"
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png" data-size="826x185">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_2.png 1024w"
 width="826"
 height="185"
 loading="lazy"
@@ -563,8 +563,8 @@ loading="lazy"
 &lt;p>&lt;code>Settings&lt;/code> → &lt;code>Editor&lt;/code> → &lt;code>Inspections&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>PHP Code Sniffier validation&lt;/code>&lt;br>
 勾選後即可啟用，亦可指定驗證標準&lt;br>
 &lt;figure style="flex-grow: 173; flex-basis: 415px">
-&lt;a href="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png" data-size="1217x703">&lt;img src="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png"
-srcset="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_2.png 480w, https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_2.png 1024w"
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png" data-size="1217x703">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_2.png 1024w"
 width="1217"
 height="703"
 loading="lazy"
@@ -575,8 +575,8 @@ loading="lazy"
 並點擊「…」將 &lt;code>Path to ruleset&lt;/code> 指向專案資料夾的 &lt;code>phpcs.xml&lt;/code>&lt;br>
 （PhpStorm 不會自動去使用該檔案作為標準，須自行指定）
 &lt;figure style="flex-grow: 212; flex-basis: 509px">
-&lt;a href="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png" data-size="630x297">&lt;img src="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png"
-srcset="https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_2.png 480w, https://blog.kid7.club/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_2.png 1024w"
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png" data-size="630x297">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_2.png 1024w"
 width="630"
 height="297"
 loading="lazy"
@@ -592,7 +592,7 @@ loading="lazy"
 >PHP Code Sniffer – Help | PhpStorm&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://ithelp.ithome.com.tw/articles/10195490" target="_blank" rel="noopener"
 >調整程式碼風格（Coding Style）&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.kid7.club/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h1 id="流程">流程&lt;/h1>
+&lt;/ul></description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h1 id="流程">流程&lt;/h1>
 &lt;ol>
 &lt;li>
 &lt;p>下載 Anaconda&lt;br>
@@ -700,7 +700,7 @@ conda init zsh
 >[Day01]Anaconda環境安裝！ – iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default" target="_blank" rel="noopener"
 >bash – How do I prevent Conda from activating the base environment by default? – Stack Overflow&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.kid7.club/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h1 id="流程">流程&lt;/h1>
+&lt;/ul></description></item><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h1 id="流程">流程&lt;/h1>
 &lt;ol>
 &lt;li>
 &lt;p>安裝 NVIDIA 顯卡驅動與相關套件&lt;br>
@@ -800,7 +800,7 @@ sudo ./bandwidthTest
 >GPU support | TensorFlow&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/38559755/how-to-get-current-available-gpus-in-tensorflow/38580201#38580201" target="_blank" rel="noopener"
 >python – How to get current available GPUs in tensorflow? – Stack Overflow&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>在 Windows 的 XAMPP 安裝 Imagick 擴充套件</title><link>https://blog.kid7.club/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</link><pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</guid><description>&lt;ol>
+&lt;/ul></description></item><item><title>在 Windows 的 XAMPP 安裝 Imagick 擴充套件</title><link>https://blog.jyhsu.tw/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</link><pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</guid><description>&lt;ol>
 &lt;li>檢視 XAMPP 的 phpinfo()，確認以下項目
 &lt;ul>
 &lt;li>Architecture：x86 / x64&lt;/li>
@@ -822,7 +822,7 @@ sudo ./bandwidthTest
 >這裡&lt;/a>下載&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ol></description></item><item><title>XAMPP 安裝 PHP_CodeSniffer</title><link>https://blog.kid7.club/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</guid><description>&lt;p>&lt;strong>2019-10-06 更新：&lt;/strong>&lt;br>
+&lt;/ol></description></item><item><title>XAMPP 安裝 PHP_CodeSniffer</title><link>https://blog.jyhsu.tw/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</guid><description>&lt;p>&lt;strong>2019-10-06 更新：&lt;/strong>&lt;br>
 此篇為舊筆記&lt;br>
 現已不建議使用 pear 安裝，建議直接使用 Composer 安裝全域套件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -882,7 +882,7 @@ sudo ./bandwidthTest
 &lt;li>重新安裝 PHP_CodeSniffer
 &lt;pre>&lt;code>pear install PHP_CodeSniffer
 &lt;/code>&lt;/pre>&lt;/li>
-&lt;/ol></description></item><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.kid7.club/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.kid7.club/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>&lt;p>&lt;a class="link" href="https://flywaydb.org/" target="_blank" rel="noopener"
+&lt;/ol></description></item><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>&lt;p>&lt;a class="link" href="https://flywaydb.org/" target="_blank" rel="noopener"
 >Flyway&lt;/a> 是一款資料庫版本控管的解決方案，&lt;br>
 方便接上不同類型的資料庫，也能夠輕易實作遷移機制（Migration）&lt;/p>
 &lt;p>自己撰寫的 Spigot 插件正好需要連結資料庫&lt;br>
