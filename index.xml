@@ -90,8 +90,10 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-them
 &lt;/li>
 &lt;li>
 &lt;p>設定 GitHub Actions&lt;br>
-使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener"
->GitHub Actions for Hugo&lt;/a> 樣板設定 Workflow&lt;br>
+Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener"
+>GitHub Actions for Hugo&lt;/a> 進行專案建置，&lt;br>
+再利用 &lt;a class="link" href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener"
+>GitHub Actions for GitHub Pages&lt;/a> 將建置後的檔案發佈至 GitHub Pages。&lt;br>
 要注意的是，若須自訂域名，須在其中 &lt;a class="link" href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener"
 >actions-gh-pages&lt;/a> 章節的 &lt;code>with&lt;/code> 指令 &lt;code>cname&lt;/code> 參數&lt;br>
 具體可參考&lt;a class="link" href="https://github.com/jyhsu2000/HugoBlog/blob/master/.github/workflows/github-pages.yml" target="_blank" rel="noopener"
