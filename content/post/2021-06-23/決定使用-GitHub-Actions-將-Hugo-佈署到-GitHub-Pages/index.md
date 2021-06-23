@@ -66,7 +66,8 @@ Hugo 沒有預設主題，可以直接到 [Hugo Themes](https://themes.gohugo.io
 6. 建立 GitHub 儲存庫，將專案推送至主線
 
 7. 設定 GitHub Actions  
-使用 [GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo) 樣板設定 Workflow  
+Workflow 使用 [GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo) 進行專案建置，  
+再利用 [GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages) 將建置後的檔案發佈至 GitHub Pages。  
 要注意的是，若須自訂域名，須在其中 [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) 章節的 `with` 指令 `cname` 參數  
 具體可參考[本網誌的 Workflow](https://github.com/jyhsu2000/HugoBlog/blob/master/.github/workflows/github-pages.yml)
 
