@@ -7,13 +7,13 @@ categories:
 tags:
 ---
 
-# 被放棄的方案
+## 被放棄的方案
 過去，在[無名小站](https://zh.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E5%B0%8F%E7%AB%99)關閉之後，  
 主要是使用 [WordPress](https://tw.wordpress.org/) 將網誌架設於自己租用的 VPS。  
 但堂堂 WordPress 只用來寫網誌好像有點太浪費？  
 而且 WordPress 的架設、更新、租用 VPS 等也都會是成本。
 
-# 選擇 Hugo 與 GitHub Pages
+## 選擇 Hugo 與 GitHub Pages
 選擇替代方案時，考量的幾個主要條件：
 - 免費
 - 持續更新
@@ -36,7 +36,7 @@ tags:
 
 最終選擇了 Hugo 作為網誌的靜態網站產生器
 
-# 實際佈署流程
+## 實際佈署流程
 網路上的資料超級多了，這邊就不贅述太細節的事情
 
 1. 安裝 [Git](https://git-scm.com/) 與 [Hugo](https://gohugo.io/)  
@@ -77,7 +77,7 @@ Workflow 使用 [GitHub Actions for Hugo](https://github.com/peaceiris/actions-h
 
 9. 未來若新增或修改文章，推送至主線後，將自動觸發 GitHub Actions 將網站內容發佈
 
-# 結語
+## 結語
 將網誌轉為使用 GitHub Actions 自動將 Hugo 佈署到 GitHub Pages 之後，  
 可有效省去維護主機與網站的時間成本與金錢成本。
 
@@ -85,6 +85,6 @@ Workflow 使用 [GitHub Actions for Hugo](https://github.com/peaceiris/actions-h
 但如果真要方便，也可以直接使用 GitHub 網頁版，或使用 [HackMD](https://hackmd.io/)/[HedgeDoc](https://hedgedoc.org/) 等平台連動 GitHub 儲存庫的方式進行編輯，  
 如此一來，甚至只須使用瀏覽器即可完成文章編修。
 
-# 參考資料
+## 參考資料
 - [使用 Github Actions 來自動化部署 Hugo 到 Github Pages](https://blog.puckwang.com/post/2020/use-github-actions-deploy-hugo/)
 - [Hugo Documentation](https://gohugo.io/documentation/)

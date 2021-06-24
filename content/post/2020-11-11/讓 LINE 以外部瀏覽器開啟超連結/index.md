@@ -29,5 +29,5 @@ https://wp.kid7.club/?openExternalBrowser=1
 
 如此便能使在 LINE 中點擊網址的使用者直接以外部瀏覽器開啟超連結
 
-# 參考資料
+## 參考資料
 - [LINE BOT Development Guidelines](https://developers.line.biz/media/partner-docs/LINE_BOT_Development_Guidelines.pdf) （P.52）

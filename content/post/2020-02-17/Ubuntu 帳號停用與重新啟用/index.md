@@ -6,7 +6,7 @@ categories:
 tags:
 ---
 
-# 帳號停用
+## 帳號停用
 將帳號設定為昨天過期
 ```bash
 sudo usermod -e $(date -d "yesterday" +"%Y-%m-%d") <user>
@@ -43,7 +43,7 @@ sudo mv <name of archive>.tar.gz /nfs/Backup/home_archive
 sudo rm -rd /home/<user>
 ```
 
-# 帳號重新啟用
+## 帳號重新啟用
 重建家目錄
 ```bash
 cd /home
@@ -60,7 +60,7 @@ sudo usermod -e "" <user>
 sudo chage -l <user>
 ```
 
-# 參考資料
+## 參考資料
 - [How to enable or disable a user? – Ask Ubuntu](https://askubuntu.com/questions/282806/how-to-enable-or-disable-a-user)
 - [How can I create automatically expiring user accounts? – Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/80968/how-can-i-create-automatically-expiring-user-accounts)
 - [How to Backup and Restore your Home directory | MyLinuxRamblings](https://mylinuxramblings.wordpress.com/2010/01/10/how-to-backup-and-restore-your-home-directory/)

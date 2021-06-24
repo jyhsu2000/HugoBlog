@@ -6,7 +6,7 @@ categories:
 tags:
 ---
 
-# 監控端
+## 監控端
 使用 Docker 版，以簡化佈署複雜度  
   
 [https://github.com/setiseta/docker-librenms](https://github.com/setiseta/docker-librenms)
@@ -18,7 +18,7 @@ tags:
 3. 進入修改帳號密碼（預設帳號/密碼：`librenms`）
 4. 根據需求於 HTTP server 設定反向代理
 
-# 被監控端
+## 被監控端
 安裝 snmpd 與 snmp（前者為服務本身，後者則包含 snmpwalk 等指令集）
 ```bash
 sudo apt install snmpd snmp
@@ -63,7 +63,7 @@ sudo systemctl restart snmpd.service
 sudo ufw allow from 172.16.0.0/12 to any port 161
 ```
 
-# 安裝插件
+## 安裝插件
 [https://docs.librenms.org/Extensions/Applications/](https://docs.librenms.org/Extensions/Applications/)
 
 根據上述連結中的說明安裝 SNMP 插件，並於 LibreNMS 設定中開啟對應項目
@@ -76,7 +76,7 @@ Debian-snmp ALL=(root) NOPASSWD: /etc/snmp/fail2ban
 extend fail2ban /usr/bin/sudo /etc/snmp/fail2ban
 ```
 
-# 常見問題
+## 常見問題
 若 docker-compose 在 up 之後，持續無法連上資料庫，檢查 `data/config/config.php` 是否確實有資料庫連線設定，若無則補上
 ```php
 <?php

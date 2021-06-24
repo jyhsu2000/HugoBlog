@@ -7,7 +7,7 @@ tags:
     - PhpStorm
 ---
 
-# 安裝
+## 安裝
 1. 安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）  
 [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
     ```bash
@@ -20,7 +20,7 @@ tags:
     phpcbf --version
     ```
 
-# 使用 phpcs
+## 使用 phpcs
 檢查錯誤
 ```basah
 phpcs <檔案/資料夾>
@@ -31,7 +31,7 @@ phpcs <檔案/資料夾>
 phpcbf <檔案/資料夾>
 ```
 
-# 自訂驗證標準
+## 自訂驗證標準
 使用 phpcs 時，可自訂驗證使用標準（如：PSR-2，或[自己撰寫的定義檔](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset)等）
 若未指定，將預設嘗試抓取 `phpcs.xml` 作為標準
 ```bash
@@ -39,7 +39,7 @@ phpcs --standard=PSR2
 phpcs --standard=/path/to/custom_ruleset.xml
 ```
 
-# 於 PhpStorm 使用 phpcs
+## 於 PhpStorm 使用 phpcs
 設定 Code Sniffier  
 `Settings` → `Languages & Frameworks` → `PHP` → `Quality Tools` → `Code Sniffier`
 Configuration 設定為 Local，點擊右側「…」  
@@ -61,7 +61,7 @@ Path to phpcbf 填入任意字串，只要不是空白的，PhpStorm 就會自�
 
 完成後，PhpStorm 便會依自己提供的 phpcs.xml 對專案中的程式碼進行驗證
 
-# 參考資料
+## 參考資料
 - [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 - [PHP Code Sniffer – Help | PhpStorm](https://www.jetbrains.com/help/phpstorm/using-php-code-sniffer.html)
 - [調整程式碼風格（Coding Style）](https://ithelp.ithome.com.tw/articles/10195490)

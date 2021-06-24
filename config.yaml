@@ -149,7 +149,7 @@ markup:
     tableOfContents:
         endLevel: 4
         ordered: true
-        startLevel: 1
+        startLevel: 2
     highlight:
         noClasses: false
         lineNos: true

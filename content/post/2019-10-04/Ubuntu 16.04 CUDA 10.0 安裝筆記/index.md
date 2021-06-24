@@ -12,7 +12,7 @@ tags:
     - Ubuntu
 ---
 
-# 流程
+## 流程
 
 1. 安裝 NVIDIA 顯卡驅動與相關套件  
 [https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10](https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10)
@@ -58,6 +58,6 @@ tags:
     sudo apt-mark hold nvidia-418 cuda-10-0 libcudnn7 libcudnn7-dev
     ```
 
-# 參考資料
+## 參考資料
 - [GPU support  |  TensorFlow](https://www.tensorflow.org/install/gpu)
 - [python – How to get current available GPUs in tensorflow? – Stack Overflow](https://stackoverflow.com/questions/38559755/how-to-get-current-available-gpus-in-tensorflow/38580201#38580201)

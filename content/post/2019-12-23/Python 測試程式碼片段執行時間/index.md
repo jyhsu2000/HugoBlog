@@ -17,5 +17,5 @@ elapsed = end - start
 print("elapsed:", elapsed)
 ```
 
-# 參考資料
+## 參考資料
 - [time — Time access and conversions — Python 3 documentation](https://docs.python.org/3/library/time.html)

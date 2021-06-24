@@ -7,7 +7,7 @@ categories:
 tags:
 ---
 
-# 流程
+## 流程
 
 1. 下載 Anaconda  
 [https://www.anaconda.com/distribution/](https://www.anaconda.com/distribution/)
@@ -57,7 +57,7 @@ tags:
     conda config --set auto_activate_base false
     ```
 
-# 參考資料
+## 參考資料
 - [Installing Anaconda for multiple users – Peter Roche – Medium](https://medium.com/@pjptech/installing-anaconda-for-multiple-users-650b2a6666c6)
 - [[Day01]Anaconda環境安裝！ – iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10192460)
 - [bash – How do I prevent Conda from activating the base environment by default? – Stack Overflow](https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default)

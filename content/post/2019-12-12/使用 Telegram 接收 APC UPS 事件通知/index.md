@@ -6,13 +6,13 @@ categories:
 tags:
 ---
 
-# 前置處理
+## 前置處理
 - 已連接 APC UPS，並於機器中安裝 [apcupsd](http://www.apcupsd.org/)
 - 向 [@BotFather](https://t.me/BotFather) 申請 Telegram Bot，並取得 token
 - 安裝能夠透過 CLI 呼叫 Telegram Bot API 的工具  
 （以下以 [TelegramBotCli](https://github.com/jyhsu2000/TelegramBotCli) 為例）
 
-# 設定流程
+## 設定流程
 1. 確認已完成 apcupsd 的設定，並能透過已下指令順利存取 UPS 狀態
     ```
     apcaccess status
@@ -64,6 +64,6 @@ tags:
 7. 再次測試 APC UPS 能否偵測並發送事件  
 ~~（再拔一次插頭）~~
 
-# 參考資料
+## 參考資料
 - [APCUPSD User Manual](http://www.apcupsd.org/manual/)
 - [從零開始的 Telegram Bot | Sean’s Note](https://blog.sean.taipei/2017/05/telegram-bot)
