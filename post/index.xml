@@ -62,7 +62,7 @@ https://github.com/squizlabs/PHP_CodeSniffer
 phpcs &amp;lt;檔案/資料夾&amp;gt; 自動修正錯誤
 1 phpcbf &amp;lt;檔案/資料夾&amp;gt; 自訂驗證標準 使用 phpcs 時，可自訂驗證使用標準（如：PSR-2，或自己撰寫的定義檔等） 若未指定，將預設嘗試抓取 phpcs.xml 作為標準
 1 2 phpcs --standard=PSR2 phpcs --standard=/path/to/custom_ruleset.xml 於 PhpStorm 使用 phpcs 設定 Code Sniffier
-Settings → Languages &amp;amp; Frameworks → PHP → Quality Tools → Code Sniffier Configuration 設定為 Local，點擊右側「…」</description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>流程 下載 Anaconda
+Settings → Languages &amp;amp; Frameworks → PHP → Quality Tools → Code Sniffier Configuration 設定為 Local，點擊右側「…」</description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>流程 下載 Anaconda
 https://www.anaconda.com/distribution/
 1 wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh 安裝 Anaconda
 安裝路徑：/opt/anaconda
