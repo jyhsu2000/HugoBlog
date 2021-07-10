@@ -12,4 +12,20 @@ https://platane.github.io/snk/ 正式開始 由於最終目標是要在 GitHub �
 建立與帳號同名儲存庫並建立 README.md 的流程就請自行參考 GitHub 文件了。
 這邊主要說明如何利用 GitHub Actions 定時自動更新圖片，並將其展示於上述位置。
 步驟非常簡單，snk 專案也提供了完整的範例，以下只針對重點說明。
-進入 GitHub 中與帳號同名的儲存庫，點擊 Actions 進入 GitHub Actions 頁面 點擊 New workflows 建立新的工作流程 檔名自訂（供自己辨識用），內容貼上以下設定，並將 github_user_name 參數的值改為自己的 GitHub 帳號 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 name:generate animationon:schedule:- cron:&amp;#34;0 */6 * * *&amp;#34;# every 6 hoursworkflow_dispatch:jobs:generate:runs-on:ubuntu-latesttimeout-minutes:10steps:# generates a snake game from a github user (&amp;lt;github_user_name&amp;gt;) contributions graph, output a svg animation at &amp;lt;svg_out_path&amp;gt;- name:generate github-contribution-grid-snake.</description></item></channel></rss>
+進入 GitHub 中與帳號同名的儲存庫，點擊 Actions 進入 GitHub Actions 頁面 點擊 New workflows 建立新的工作流程 檔名自訂（供自己辨識用），內容貼上以下設定，並將 github_user_name 參數的值改為自己的 GitHub 帳號 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 name:generate animationon:schedule:- cron:&amp;#34;0 */6 * * *&amp;#34;# every 6 hoursworkflow_dispatch:jobs:generate:runs-on:ubuntu-latesttimeout-minutes:10steps:# generates a snake game from a github user (&amp;lt;github_user_name&amp;gt;) contributions graph, output a svg animation at &amp;lt;svg_out_path&amp;gt;- name:generate github-contribution-grid-snake.</description></item><item><title>決定使用 GitHub Actions 將 Hugo 佈署到 GitHub Pages</title><link>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</link><pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</guid><description>被放棄的方案 過去，在無名小站關閉之後，
+主要是使用 WordPress 將網誌架設於自己租用的 VPS。
+但堂堂 WordPress 只用來寫網誌好像有點太浪費？
+而且 WordPress 的架設、更新、租用 VPS 等也都會是成本。
+選擇 Hugo 與 GitHub Pages 選擇替代方案時，考量的幾個主要條件：
+免費 持續更新 無須準備網站伺服器主機 不用花太多時間維護 使用 Markdown 撰寫 其中希望使用 Markdown 撰寫的原因，不外乎是平常的習慣，在 GitHub、GitLab、HackMD 等網站都是使用 Markdown。
+比起 WordPress 那些強大的文章編輯工具，Markdown 這類簡單的文字格式反而更適合我們有條理的編輯與呈現內容。
+基於上述考量，認為不見得需要將網誌平台「架設」起來，
+而將整個網誌本身轉換為靜態網頁，或許也是個方案。
+並且若是靜態網站，就可以直接發佈到 GitHub Pages 而無須自行架設。
+因此，決定往「靜態網站產生器」的方向尋找，
+除了以前就知道但一直沒去接觸的 Jekyll 之外，也得知了 Hexo 與 Hugo 的存在。
+為了從這些當中選出一款來使用，除了各自官方網站的介紹之外，也稍微看了些比較的文章：
+靜態網站產生器介紹 靜態網站產生器大比拚 最終選擇了 Hugo 作為網誌的靜態網站產生器
+實際佈署流程 網路上的資料超級多了，這邊就不贅述太細節的事情
+安裝 Git 與 Hugo
+須對於指令操作與 Git 版本控制略為熟悉。</description></item></channel></rss>
