@@ -1,5 +1,6 @@
 ---
 title: 使用 dill 保留 Python Session
+description: 將 Session 中的所有變數保存起來，並於需要時載入使用
 date: 2021-09-30
 categories:
     - Python
@@ -25,12 +26,14 @@ pip3 install dill
 ```
 
 ## 保存 Session
+將 Session 中的所有變數保存至檔案
 ```python
 import dill
 dill.dump_session(filename='path/to/session.pkl')
 ```
 
 ## 載入 Session
+載入檔案，將變數取回到 Session 中
 ```python
 import dill
 dill.load_session(filename='path/to/session.pkl')
