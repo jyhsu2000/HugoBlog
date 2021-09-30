@@ -6,8 +6,9 @@
 並透過反序列化的方式由 Pickle 檔案取回變數到 Session 中。
 相較於其他序列化／反序列化套件，dill 還可以直接將 Session 中的所有變數進行上述動作。
 安裝 直接使用 pip 直接進行套件安裝即可
-1 pip3 install dill 保存 Session 1 2 import dill dill.dump_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 載入 Session 1 2 import dill dill.load_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 注意 若不指定 filename 參數，將預設為暫存資料夾中的 /tmp/session.pkl，
-如欲長久保留，或欲區分多個 Session 的變數，建議自行指定檔案路徑</description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>資料處理時，常需要將時間轉換為接近的整點，
+1 pip3 install dill 保存 Session 將 Session 中的所有變數保存至檔案
+1 2 import dill dill.dump_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 載入 Session 載入檔案，將變數取回到 Session 中
+1 2 import dill dill.load_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 注意 若不指定 filename 參數，將預設為暫存資料夾中的 /tmp/session.</description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>資料處理時，常需要將時間轉換為接近的整點，
 如：9:47 轉換為 10:00；14:03 轉換為 14:00
 或是以 15 分鐘為區間，
 如：9:47 轉換為 9:45、5:23 轉換為 5:30

@@ -6,8 +6,9 @@
 並透過反序列化的方式由 Pickle 檔案取回變數到 Session 中。
 相較於其他序列化／反序列化套件，dill 還可以直接將 Session 中的所有變數進行上述動作。
 安裝 直接使用 pip 直接進行套件安裝即可
-1 pip3 install dill 保存 Session 1 2 import dill dill.dump_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 載入 Session 1 2 import dill dill.load_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 注意 若不指定 filename 參數，將預設為暫存資料夾中的 /tmp/session.pkl，
-如欲長久保留，或欲區分多個 Session 的變數，建議自行指定檔案路徑</description></item><item><title>用 GitHub 貢獻圖製作貪食蛇動畫</title><link>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</link><pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</guid><description>前言 GitHub 提供了一個有限度自訂個人檔案的功能。
+1 pip3 install dill 保存 Session 將 Session 中的所有變數保存至檔案
+1 2 import dill dill.dump_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 載入 Session 載入檔案，將變數取回到 Session 中
+1 2 import dill dill.load_session(filename=&amp;#39;path/to/session.pkl&amp;#39;) 注意 若不指定 filename 參數，將預設為暫存資料夾中的 /tmp/session.</description></item><item><title>用 GitHub 貢獻圖製作貪食蛇動畫</title><link>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</link><pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</guid><description>前言 GitHub 提供了一個有限度自訂個人檔案的功能。
 只要在自己的帳號中建立與帳號相同名稱的儲存庫，
 其中的 README.md 檔案，將會展示在個人頁面上方。
 之前我只放了一些在 GitHub 活動或紀錄相關的統計圖，
