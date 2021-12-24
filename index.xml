@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 dill 保留 Python Session</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 24 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>自動切換 tqdm 進度條的顯示模式</title><link>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>使用 Python 時，若須顯示進度條，常會使用 &lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
+>tqdm&lt;/a> 套件來顯示進度條。&lt;/p>
+&lt;h2 id="介紹">介紹&lt;/h2>
+&lt;p>tqdm 是個方便用於顯示進度條的套件，只要簡單的使用 &lt;code>tqdm()&lt;/code> 將要迭代的變數包起來，即可直接顯示進度條&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;span class="o">...&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然而若使用 Jupyter Notebook 來執行，顯示上會怪怪的，&lt;br>
+一般會替換使用專為 Notebook 設計的 &lt;code>tqdm.notebook&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.notebook&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;span class="o">...&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>那如果同一份程式碼，要用於指令界面與 Notebook 呢？&lt;br>
+正好套件也有提供能自動偵測環境的 tqdm&lt;br>
+只要改用 &lt;code>tqdm.auto&lt;/code> 就可以了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.auto&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;span class="o">...&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="結語">結語&lt;/h2>
+&lt;p>用 &lt;code>tqdm.auto&lt;/code> 就對了&lt;/p>
+&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
+>tqdm - A Fast, Extensible Progress Bar for Python and CLI&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>使用 dill 保留 Python Session</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>在使用 Python 直譯器或 Jupyter 等工具進行測試時，有時會希望能將變數保留下來，&lt;br>
 通常我們會將變數逐一保存為 &lt;code>pickle&lt;/code>（&lt;code>*.pkl&lt;/code>）檔案，&lt;br>
 但若須保存的變數較多，或希望保存整個 Session 的所有變數，如此操作卻會相當麻煩，&lt;br>
