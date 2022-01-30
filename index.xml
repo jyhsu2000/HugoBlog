@@ -99,11 +99,17 @@
 &lt;h2 id="實際測試">實際測試&lt;/h2>
 &lt;p>嘗試建立變數，並透過 dill 保存 Session，&lt;br>
 重開一個 Session 後，透過 dill 載入被保存的 Session
-&lt;figure style="flex-grow: 146; flex-basis: 350px">
-&lt;a href="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png" data-size="586x401">&lt;img src="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png"
-srcset="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_1024x0_resize_box_2.png 1024w"
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 146;
+flex-basis: 350px"
+>
+&lt;a href="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png" data-size="586x401">
+&lt;img src="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png"
 width="586"
 height="401"
+srcset="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_1024x0_resize_box_2.png 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -921,11 +927,17 @@ phpcs --standard&lt;span class="o">=&lt;/span>/path/to/custom_ruleset.xml
 &lt;p>設定 Code Sniffier&lt;br>
 &lt;code>Settings&lt;/code> → &lt;code>Languages &amp;amp; Frameworks&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>Code Sniffier&lt;/code>
 Configuration 設定為 Local，點擊右側「…」&lt;br>
-&lt;figure style="flex-grow: 272; flex-basis: 654px">
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png" data-size="763x280">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_2.png 1024w"
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 272;
+flex-basis: 654px"
+>
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png" data-size="763x280">
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png"
 width="763"
 height="280"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_2.png 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -933,22 +945,34 @@ loading="lazy"
 &lt;p>PHP Code Sniffier path 設定為「phpcs.bat」（無須指定路徑），點擊 &lt;code>Validate&lt;/code> 進行驗證，確認抓到全域 &lt;code>phpcs&lt;/code> 指令&lt;br>
 Path to phpcbf 填入任意字串，只要不是空白的，PhpStorm 就會自動去抓全域的 &lt;code>phpcbf&lt;/code>&lt;br>
 （這種設定方式會使得無法使用 &lt;code>Validate&lt;/code> 進行驗證，但不影響使用）&lt;br>
-&lt;figure style="flex-grow: 446; flex-basis: 1071px">
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png" data-size="826x185">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_2.png 1024w"
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 446;
+flex-basis: 1071px"
+>
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png" data-size="826x185">
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png"
 width="826"
 height="185"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_2.png 1024w"
 loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
 &lt;p>&lt;code>Settings&lt;/code> → &lt;code>Editor&lt;/code> → &lt;code>Inspections&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>PHP Code Sniffier validation&lt;/code>&lt;br>
 勾選後即可啟用，亦可指定驗證標準&lt;br>
-&lt;figure style="flex-grow: 173; flex-basis: 415px">
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png" data-size="1217x703">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_2.png 1024w"
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 173;
+flex-basis: 415px"
+>
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png" data-size="1217x703">
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png"
 width="1217"
 height="703"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_2.png 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -956,11 +980,17 @@ loading="lazy"
 &lt;p>將 &lt;code>Coding standard&lt;/code> 指定為 &lt;code>Custom&lt;/code>&lt;br>
 並點擊「…」將 &lt;code>Path to ruleset&lt;/code> 指向專案資料夾的 &lt;code>phpcs.xml&lt;/code>&lt;br>
 （PhpStorm 不會自動去使用該檔案作為標準，須自行指定）
-&lt;figure style="flex-grow: 212; flex-basis: 509px">
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png" data-size="630x297">&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_2.png 1024w"
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 212;
+flex-basis: 509px"
+>
+&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png" data-size="630x297">
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png"
 width="630"
 height="297"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_2.png 1024w"
 loading="lazy"
 >
 &lt;/a>

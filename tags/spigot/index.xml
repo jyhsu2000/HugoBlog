@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spigot on KID's Blog</title><link>https://blog.jyhsu.tw/tags/spigot/</link><description>Recent content in Spigot on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/tags/spigot/index.xml" rel="self" type="application/rss+xml"/><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>Flyway 是一款資料庫版本控管的解決方案，
-方便接上不同類型的資料庫，也能夠輕易實作遷移機制（Migration）
-自己撰寫的 Spigot 插件正好需要連結資料庫
-原本苦惱於遷移機制的實作，直到發現 Flyway 具備遷移機制，同時又具有 Java API 可以使用
-就決定是這款了！
-這篇主要是要記錄自己踩雷的解決方法，就不推坑傳教了
-有興趣自己去 Google
-在這次撰寫的 Spigot 插件中，打算暫且先以 SQLite 作為資料庫
-於是先安裝了 Flyway 與 SQLite-JDBC
-compile 'org.flywaydb:flyway-core:5.2.4' compile 'org.xerial:sqlite-jdbc:3.23.1' 設定 Flyway
-1 2 3 4 5 String configFolder = this.plugin.getDataFolder().getAbsolutePath(); String dbUrl = &amp;#34;jdbc:sqlite:&amp;#34; + configFolder + &amp;#34;/database.db&amp;#34;; Flyway flyway = Flyway.configure().dataSource(dbUrl, null, null).load(); flyway.migrate(); 然後他就爆炸了ლ(ﾟдﾟლ)
-遇到的第一個問題：
-FlywayException: Unable to instantiate class org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator 解決方案：自行指令 LogCreator</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spigot on KID's Blog</title><link>https://blog.jyhsu.tw/tags/spigot/</link><description>Recent content in Spigot on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/tags/spigot/index.xml" rel="self" type="application/rss+xml"/><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>Flyway 是一款資料庫版本控管的解決方案， 方便接上不同類型的資料庫，也能夠輕易實作遷移機制（Migration） 自己撰寫的 Spigot 插件正好需要連結資料庫 原</description></item></channel></rss>
