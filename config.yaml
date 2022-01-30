@@ -54,8 +54,8 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: false
-        provider: disqus
+        enabled: true
+        provider: vssue
 
         disqusjs:
             shortname:
@@ -75,11 +75,11 @@ params:
             locale:
 
         vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
+            platform: github
+            owner: jyhsu2000
+            repo: HugoBlog
+            clientId: 9fbd431ae1774ff71ead
+            clientSecret: ecf95a7a1d26f28c4d84941af19b449b032d4aee
             autoCreateIssue: false
 
         # Waline client configuration see: https://waline.js.org/en/reference/client.html
