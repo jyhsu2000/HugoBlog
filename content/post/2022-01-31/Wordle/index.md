@@ -64,9 +64,9 @@ draft: false
 - https://taximanli.github.io/kotobade-asobou/
 - 猜：四個平假名構成的日文詞彙
 
-## 【算數】Nerdle - the daily numbers game
+## 【算術】Nerdle - the daily numbers game
 - https://nerdlegame.com/
-- 猜：八個字的算數表達式
+- 猜：八個字的數學表達式
 - 技巧：先掌握等號位置
 
 ## 【質數】Primel
