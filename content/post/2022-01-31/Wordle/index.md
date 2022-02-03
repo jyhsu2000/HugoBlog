@@ -81,6 +81,10 @@ draft: false
 - http://samuello.io/jndle/
 - 猜：五個倉頡碼
 
+## 【麻將】Mahjong Handle
+- https://mahjong-handle.update.sh/
+- 猜：麻將胡牌的手牌（按照萬、筒、條、字與數字大小排列）
+
 ---
 
 ## 終極大技巧
