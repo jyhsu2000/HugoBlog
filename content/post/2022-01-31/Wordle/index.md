@@ -85,6 +85,12 @@ draft: false
 - https://mahjong-handle.update.sh/
 - 猜：麻將胡牌的手牌（按照萬、筒、條、字與數字大小排列）
 
+## 【四組】Quordle
+- https://www.quordle.com/
+- 猜：四個英文單字（皆為五個字母）
+- 技巧：前幾次猜測，盡可能讓更多的字母出現過
+- 一次玩四組 Wordle 的概念，不過每次是同時對四組題目做相同猜測
+
 ---
 
 ## 終極大技巧
