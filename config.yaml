@@ -5,7 +5,7 @@ paginate: 10
 title: KID's Blog
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: jyhsu-blog
 
 # GA Tracking ID
 googleAnalytics: G-YSGYCGW5GL
@@ -55,7 +55,7 @@ params:
 
     comments:
         enabled: true
-        provider: vssue
+        provider: disqus
 
         disqusjs:
             shortname:
