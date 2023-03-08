@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>Wordle 與類似遊戲</title><link>https://blog.jyhsu.tw/p/wordle/</link><pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/wordle/</guid><description>&lt;p>應該不少人常在 FB、噗浪等平台看過類似這樣的分享↓&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>PyCharm 中 OpenCV 自動完成</title><link>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</link><pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>在 PyCharm 中，&lt;br>
+若使用較新版本的 OpenCV（&amp;gt;= 4.6），&lt;br>
+會發現 OpenCV 的自動完成功能無法正常運作，&lt;br>
+程式碼對於 &lt;code>cv2&lt;/code> 的靜態檢查亦會提示錯誤。&lt;/p>
+&lt;p>&lt;a class="link" href="https://youtrack.jetbrains.com/issue/PY-54649" target="_blank" rel="noopener"
+>該問題&lt;/a>在 JetBrains 的 YouTrack 上已經被提出許久，&lt;br>
+但目前 JetBrains 與 OpenCV 雙方都未直接解決此問題。&lt;/p>
+&lt;p>這邊提供幾種應急解決方案。&lt;/p>
+&lt;h2 id="解決方案">解決方案&lt;/h2>
+&lt;h3 id="方案-1---使用舊版-opencv">方案 1 - 使用舊版 OpenCV&lt;/h3>
+&lt;p>直接逃避問題，將 OpenCV 指定使用 4.5 當中的最新版本&lt;/p>
+&lt;pre>&lt;code>opencv-python==4.5.5.62
+&lt;/code>&lt;/pre>&lt;h3 id="方案-2---修改直譯器設定使其能夠識別-cv2">方案 2 - 修改直譯器設定，使其能夠識別 &lt;code>cv2&lt;/code>&lt;/h3>
+&lt;p>透過以下方式，使 PyCharm 能夠正確識別 &lt;code>cv2&lt;/code> 套件的界面&lt;/p>
+&lt;ol>
+&lt;li>開啟直譯器設定：&lt;code>File&lt;/code> → &lt;code>Settings...&lt;/code> → &lt;code>Project: &amp;lt;專案名稱&amp;gt;&lt;/code> → &lt;code>Project Interpreter&lt;/code>&lt;/li>
+&lt;li>點擊 &lt;code>Project Interpreter&lt;/code> 的下拉選單，選擇 &lt;code>Show All...&lt;/code>&lt;/li>
+&lt;li>選擇當前使用之直譯器，點擊上方 &lt;code>Show Interpreter Paths&lt;/code> 圖示按鈕&lt;/li>
+&lt;li>點擊 &lt;code>Add&lt;/code> 按鈕，新增一個路徑，路徑為 &lt;code>cv2&lt;/code> 套件的安裝路徑
+&lt;ul>
+&lt;li>例如：使用 &lt;code>venv&lt;/code>，則將 &lt;code>venv/Lib/site-packages/cv2&lt;/code> 新增至其中&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>點擊 &lt;code>OK&lt;/code> 按鈕，完成設定，即可正常使用 OpenCV 的自動完成功能&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 113;
+flex-basis: 272px"
+>
+&lt;a href="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting.png" data-size="816x719">
+&lt;img src="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting.png"
+width="816"
+height="719"
+srcset="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_1024x0_resize_box_2.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://youtrack.jetbrains.com/issue/PY-54649" target="_blank" rel="noopener"
+>OpenCV code completion is (still!) not working : PY-54649&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/73174194/opencv-autocomplete-not-working-on-pycharm" target="_blank" rel="noopener"
+>python - opencv autocomplete not working on pycharm - Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Wordle 與類似遊戲</title><link>https://blog.jyhsu.tw/p/wordle/</link><pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/wordle/</guid><description>&lt;p>應該不少人常在 FB、噗浪等平台看過類似這樣的分享↓&lt;/p>
 &lt;blockquote>
 &lt;p>Wordle 225 6/6&lt;br>
 ⬜🟨⬜⬜⬜&lt;br>
