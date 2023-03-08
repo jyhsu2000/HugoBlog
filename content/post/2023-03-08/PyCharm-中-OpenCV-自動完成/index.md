@@ -8,7 +8,6 @@ categories:
 tags:
     - JetBrains
     - PyCharm
-draft: true
 ---
 
 ## 前言
