@@ -1,0 +1,23 @@
+<style>
+    /* Overwrite CSS variable */
+    :root {
+        /* Add Noto Sans TC */
+        --zh-font-family: "Noto Sans TC", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
+        /* Add Source Code Pro */
+        --base-font-family: "Source Code Pro", "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
+        --article-font-family: "Source Code Pro", var(--base-font-family);
+        --code-font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
