@@ -1,1 +1,109 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anaconda on KID's Blog</title><link>https://blog.jyhsu.tw/categories/anaconda/</link><description>Recent content in Anaconda on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 06 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/anaconda/index.xml" rel="self" type="application/rss+xml"/><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>流程 下載 Anaconda https://www.anaconda.com/distribution/ 1 wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh 安裝 Anaconda 安裝路徑：/opt/anaconda 不使用 Conda init 初始化 1 sudo bash ./Anaconda3-2019.07-Linux-x86_64.sh 建立 Anaconda 使用者 1 sudo useradd anaconda 設定資料夾權限 1 2 3 sudo chown -R anaconda:anaconda /opt/anaconda sudo chmod -R</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anaconda on KID's Blog</title><link>https://blog.jyhsu.tw/categories/anaconda/</link><description>Recent content in Anaconda on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 06 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/anaconda/index.xml" rel="self" type="application/rss+xml"/><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>下載 Anaconda&lt;br>
+&lt;a class="link" href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener"
+>https://www.anaconda.com/distribution/&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>安裝 Anaconda&lt;br>
+安裝路徑：&lt;strong>/opt/anaconda&lt;/strong>&lt;br>
+不使用 Conda init 初始化&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo bash ./Anaconda3-2019.07-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>建立 Anaconda 使用者&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo useradd anaconda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>設定資料夾權限&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chown -R anaconda:anaconda /opt/anaconda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod -R go-w /opt/anaconda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod -R go+rX /opt/anaconda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>設定 PATH&lt;br>
+（給使用者：）在 &lt;strong>/etc/environment&lt;/strong> 的 PATH 新增 &lt;strong>/opt/anaconda/bin&lt;/strong>&lt;br>
+（給 root：）在 &lt;strong>/etc/profile&lt;/strong> 新增 &lt;strong>export PATH=/opt/anaconda/bin:$PATH&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>更新 conda 本身&lt;br>
+（設定 PATH 給 sudo 比較麻煩，可使用下方方式呼叫，或 sudo -i 進 root 之後使用 conda）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="k">$(&lt;/span>which conda&lt;span class="k">)&lt;/span> update -n base -c defaults conda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>初始化 conda&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化給 Bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化給 Zsh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda init zsh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>關閉登入自動 activate&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">conda config --set auto_activate_base &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://medium.com/@pjptech/installing-anaconda-for-multiple-users-650b2a6666c6" target="_blank" rel="noopener"
+>Installing Anaconda for multiple users – Peter Roche – Medium&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://ithelp.ithome.com.tw/articles/10192460" target="_blank" rel="noopener"
+>[Day01]Anaconda環境安裝！ – iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default" target="_blank" rel="noopener"
+>bash – How do I prevent Conda from activating the base environment by default? – Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,1 +1,361 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on KID's Blog</title><link>https://blog.jyhsu.tw/categories/ubuntu/</link><description>Recent content in Ubuntu on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 SNMP 進行系統監控</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>監控端 使用 Docker 版，以簡化佈署複雜度 https://github.com/setiseta/docker-librenms 調整 docker-compose.yml 修改 port 修改時區為 Asia/Taipei（兩處） 使用 docker-compose 佈署上述容器 進入修改帳號密碼（預設帳號/密碼：l</description></item><item><title>測試檔案讀寫速度</title><link>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</guid><description>可用於測試本機速度、NFS 速度等 請先以 cd 指令切換至欲測試的路徑 測試檔案寫入速度 1 time dd if=/dev/zero of=testfile bs=16k count=128k 測試檔案讀取速度 1 time dd if=testfile of=/dev/null bs=16k 參考資料 performance – Measure &amp;amp; benchmark the</description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>帳號停用 將帳號設定為昨天過期 1 sudo usermod -e $(date -d &amp;#34;yesterday&amp;#34; +&amp;#34;%Y-%m-%d&amp;#34;) &amp;lt;user&amp;gt; 確認帳號期限 1 sudo chage -l &amp;lt;user&amp;gt; 封存家目錄 1 2 3 4 cd /home sudo tar -I pigz -p -cvf &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt; # 或以下 sudo tar czvfp &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt; In addition, when doing</description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>前置處理 已連接 APC UPS，並於機器中安裝 apcupsd 向 @BotFather 申請 Telegram Bot，並取得 token 安裝能夠透過 CLI 呼叫 Telegram Bot API 的工具 （以下以 TelegramBotCli 為例） 設定流程 確認已完成 apcupsd 的設定，</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on KID's Blog</title><link>https://blog.jyhsu.tw/categories/ubuntu/</link><description>Recent content in Ubuntu on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 SNMP 進行系統監控</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>&lt;h2 id="監控端">監控端
+&lt;/h2>&lt;p>使用 Docker 版，以簡化佈署複雜度&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/setiseta/docker-librenms" target="_blank" rel="noopener"
+>https://github.com/setiseta/docker-librenms&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>調整 docker-compose.yml&lt;br>
+修改 port&lt;br>
+修改時區為 &lt;code>Asia/Taipei&lt;/code>（兩處）&lt;/li>
+&lt;li>使用 docker-compose 佈署上述容器&lt;/li>
+&lt;li>進入修改帳號密碼（預設帳號/密碼：&lt;code>librenms&lt;/code>）&lt;/li>
+&lt;li>根據需求於 HTTP server 設定反向代理&lt;/li>
+&lt;/ol>
+&lt;h2 id="被監控端">被監控端
+&lt;/h2>&lt;p>安裝 snmpd 與 snmp（前者為服務本身，後者則包含 snmpwalk 等指令集）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install snmpd snmp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>從本機測試連線&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">snmpwalk -v 2c -c public localhost
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>修改 &lt;code>/etc/snmp/snmpd.conf&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>修改 agentAddress，使其能從遠端被訪問（存取控制則由防火牆直接管理）
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"># 將
+agentAddress udp:127.0.0.1:161
+# 修改為
+agentAddress udp:161
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>修改資料收集範圍（參考 IDC 設定方式）
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"># 將
+view systemonly included .1.3.6.1.2.1.1
+view systemonly included .1.3.6.1.2.1.25.1
+# 修改為
+view systemonly included .1.3.6.1.
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>修改地理位置資訊
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">sysLocation IEE 201
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ul>
+&lt;p>重新啟動 snmpd&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl restart snmpd.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>調整防火牆設定，允許監控端連入&lt;br>
+（若需由本機 docker 連入，則允許 &lt;code>172.16.0.0/12&lt;/code> 連入 &lt;code>udp:161&lt;/code>）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo ufw allow from 172.16.0.0/12 to any port &lt;span class="m">161&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="安裝插件">安裝插件
+&lt;/h2>&lt;p>&lt;a class="link" href="https://docs.librenms.org/Extensions/Applications/" target="_blank" rel="noopener"
+>https://docs.librenms.org/Extensions/Applications/&lt;/a>&lt;/p>
+&lt;p>根據上述連結中的說明安裝 SNMP 插件，並於 LibreNMS 設定中開啟對應項目&lt;/p>
+&lt;p>部分插件（如 fail2ban）需要 sudo 權限，則須在 visudo 設定特權，並於 &lt;code>/etc/snmp/snmpd.conf&lt;/code> 設定使用 sudo 執行&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">Debian-snmp ALL=(root) NOPASSWD: /etc/snmp/fail2ban
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">extend fail2ban /usr/bin/sudo /etc/snmp/fail2ban
+&lt;/code>&lt;/pre>&lt;h2 id="常見問題">常見問題
+&lt;/h2>&lt;p>若 docker-compose 在 up 之後，持續無法連上資料庫，檢查 &lt;code>data/config/config.php&lt;/code> 是否確實有資料庫連線設定，若無則補上&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Have a look in misc/config_definitions.json for examples of settings you can set here. DO NOT EDIT misc/config_definitions.json!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### Database config
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_host&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;mysql&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_user&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;root&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_pass&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;pwd4librenms&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_name&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;librenms&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>若超連結路徑出現各種底線，將 &lt;code>data/config/config.php&lt;/code> 中以下段落解除註解&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;base_url&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>若無法採集 fail2ban 的資訊，直接執行出現以下訊息&lt;/p>
+&lt;pre tabindex="0">&lt;code>Can&amp;#39;t locate JSON.pm in @INC (you may need to install the JSON module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at ./fail2ban line 80.
+BEGIN failed--compilation aborted at ./fail2ban line 80.
+&lt;/code>&lt;/pre>&lt;p>需安裝 &lt;code>libjson-perl&lt;/code> 套件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install libjson-perl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>測試檔案讀寫速度</title><link>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</guid><description>&lt;p>可用於測試本機速度、NFS 速度等&lt;br>
+請先以 &lt;code>cd&lt;/code> 指令切換至欲測試的路徑&lt;/p>
+&lt;h2 id="測試檔案寫入速度">測試檔案寫入速度
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">time&lt;/span> dd &lt;span class="k">if&lt;/span>&lt;span class="o">=&lt;/span>/dev/zero &lt;span class="nv">of&lt;/span>&lt;span class="o">=&lt;/span>testfile &lt;span class="nv">bs&lt;/span>&lt;span class="o">=&lt;/span>16k &lt;span class="nv">count&lt;/span>&lt;span class="o">=&lt;/span>128k
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="測試檔案讀取速度">測試檔案讀取速度
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">time&lt;/span> dd &lt;span class="k">if&lt;/span>&lt;span class="o">=&lt;/span>testfile &lt;span class="nv">of&lt;/span>&lt;span class="o">=&lt;/span>/dev/null &lt;span class="nv">bs&lt;/span>&lt;span class="o">=&lt;/span>16k
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://serverfault.com/questions/324438/measure-benchmark-the-speed-latency-of-file-access-on-a-mounted-nfs-share/324489#324489" target="_blank" rel="noopener"
+>performance – Measure &amp;amp; benchmark the speed &amp;amp; latency of file access on a mounted NFS share – Server Fault&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>&lt;h2 id="帳號停用">帳號停用
+&lt;/h2>&lt;p>將帳號設定為昨天過期&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo usermod -e &lt;span class="k">$(&lt;/span>date -d &lt;span class="s2">&amp;#34;yesterday&amp;#34;&lt;/span> +&lt;span class="s2">&amp;#34;%Y-%m-%d&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span> &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>確認帳號期限&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chage -l &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>封存家目錄&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /home
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar -I pigz -p -cvf &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 或以下&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar czvfp &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>In addition, when doing a tar backup, it’s also good to add the following flags : p &amp;amp; (z/j)&lt;br>
+-p will preserve the original file permissions&lt;br>
+-z will compress using gzip (medium cpu usage, but less space)&lt;br>
+-j will compress using bzip2 (lots of cpu, even less space)&lt;br>
+-v verbose output (optional)&lt;/p>
+&lt;/blockquote>
+&lt;p>將封存檔移往 NFS 封存區&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rsync -avhP --remove-source-files &amp;lt;name of archive&amp;gt;.tar.gz /nfs/Backup/home_archive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 或以下&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mv &amp;lt;name of archive&amp;gt;.tar.gz /nfs/Backup/home_archive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>移除家目錄&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm -rd /home/&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="帳號重新啟用">帳號重新啟用
+&lt;/h2>&lt;p>重建家目錄&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /home
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重新啟用帳號&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo usermod -e &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>確認帳號期限&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chage -l &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://askubuntu.com/questions/282806/how-to-enable-or-disable-a-user" target="_blank" rel="noopener"
+>How to enable or disable a user? – Ask Ubuntu&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://unix.stackexchange.com/questions/80968/how-can-i-create-automatically-expiring-user-accounts" target="_blank" rel="noopener"
+>How can I create automatically expiring user accounts? – Unix &amp;amp; Linux Stack Exchange&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://mylinuxramblings.wordpress.com/2010/01/10/how-to-backup-and-restore-your-home-directory/" target="_blank" rel="noopener"
+>How to Backup and Restore your Home directory | MyLinuxRamblings&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>&lt;h2 id="前置處理">前置處理
+&lt;/h2>&lt;ul>
+&lt;li>已連接 APC UPS，並於機器中安裝 &lt;a class="link" href="http://www.apcupsd.org/" target="_blank" rel="noopener"
+>apcupsd&lt;/a>&lt;/li>
+&lt;li>向 &lt;a class="link" href="https://t.me/BotFather" target="_blank" rel="noopener"
+>@BotFather&lt;/a> 申請 Telegram Bot，並取得 token&lt;/li>
+&lt;li>安裝能夠透過 CLI 呼叫 Telegram Bot API 的工具&lt;br>
+（以下以 &lt;a class="link" href="https://github.com/jyhsu2000/TelegramBotCli" target="_blank" rel="noopener"
+>TelegramBotCli&lt;/a> 為例）&lt;/li>
+&lt;/ul>
+&lt;h2 id="設定流程">設定流程
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>確認已完成 apcupsd 的設定，並能透過已下指令順利存取 UPS 狀態&lt;/p>
+&lt;pre tabindex="0">&lt;code>apcaccess status
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>
+&lt;p>在 Terminal 開著的情況下，測試 UPS 能否順利偵測事件並發送通知&lt;br>
+&lt;del>（拔插頭看有沒有看到訊息之類的）&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>進入 &lt;code>/etc/apcupsd&lt;/code>，可以看到一些檔案&lt;br>
+&lt;code>apccontrol&lt;/code> 是整個核心部分，有興趣可以看看，但官方警告不要修改這個&lt;br>
+於是我們要修改的是根據不同事件各自獨立的處理流程檔案&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>開啟事件處理流程檔案，如 &lt;code>offbattery&lt;/code>、&lt;code>onbattery&lt;/code>、&lt;code>commfailure&lt;/code>、&lt;code>commok&lt;/code> 等我們希望收到通知的事件，預設應該會是類似以下內容&lt;br>
+主要是在事件發生時，先整理需要的訊息，並以管線轉送給設定好的通知程序，進行通知發送的動作&lt;br>
+其中第 16 行管線後的部分，即為我們希望修改的訊息轉送動作&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="hl">&lt;span class="lnt">16
+&lt;/span>&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># This shell script if placed in /etc/apcupsd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># will be called by /etc/apcupsd/apccontrol when the&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># UPS goes back on to the mains after a power failure.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># We send an email message to root to notify him.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">HOSTNAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>hostname&lt;span class="sb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">MSG&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOSTNAME&lt;/span>&lt;span class="s2"> UPS &lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2"> Power has returned&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /sbin/apcaccess status
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nv">$APCUPSD_MAIL&lt;/span> -s &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="nv">$SYSADMIN&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">exit&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>我們希望將通知由預設的郵件通知改為 Telegram Bot 通知，因此需要修改管線後的部分&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nv">$APCUPSD_MAIL&lt;/span> -s &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="nv">$SYSADMIN&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>將其改為發送通知的指令，如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> xargs -0 python3 /home/jyhsu/TelegramBotCli/sendMessage.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>重新啟動 apcupsd 服務&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">sudo systemctl restart apcupsd.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>再次測試 APC UPS 能否偵測並發送事件&lt;br>
+&lt;del>（再拔一次插頭）&lt;/del>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="http://www.apcupsd.org/manual/" target="_blank" rel="noopener"
+>APCUPSD User Manual&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.sean.taipei/2017/05/telegram-bot" target="_blank" rel="noopener"
+>從零開始的 Telegram Bot | Sean’s Note&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

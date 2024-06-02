@@ -1,1 +1,474 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on KID's Blog</title><link>https://blog.jyhsu.tw/categories/python/</link><description>Recent content in Python on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/python/index.xml" rel="self" type="application/rss+xml"/><item><title>PyCharm 中 OpenCV 自動完成</title><link>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</link><pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</guid><description>前言 在 PyCharm 中， 若使用較新版本的 OpenCV（&amp;gt;= 4.6）， 會發現 OpenCV 的自動完成功能無法正常運作， 程式碼對於 cv2 的靜態檢查亦會提示錯誤。 該問題</description></item><item><title>自動切換 tqdm 進度條的顯示模式</title><link>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</guid><description>前言 使用 Python 時，若須顯示進度條，常會使用 tqdm 套件來顯示進度條。 介紹 tqdm 是個方便用於顯示進度條的套件，只要簡單的使用 tqdm() 將要迭代的變數包起來，即可直接</description></item><item><title>使用 dill 保留 Python Session</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</guid><description>前言 在使用 Python 直譯器或 Jupyter 等工具進行測試時，有時會希望能將變數保留下來， 通常我們會將變數逐一保存為 pickle（*.pkl）檔案， 但若須保存的變</description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>資料處理時，常需要將時間轉換為接近的整點， 如：9:47 轉換為 10:00；14:03 轉換為 14:00 或是以 15 分鐘為區間， 如：9:47 轉換為 9:45、5</description></item><item><title>Python 測試程式碼片段執行時間</title><link>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</link><pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</guid><description>測試 Python 的程式碼片段實際執行所需秒數 1 2 3 4 5 6 7 import time start = time.perf_counter() # Do something end = time.perf_counter() elapsed = end - start print(&amp;#34;elapsed:&amp;#34;, elapsed) 參考資料 time — Time access and conversions — Python 3 documentation</description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>流程 下載 Anaconda https://www.anaconda.com/distribution/ 1 wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh 安裝 Anaconda 安裝路徑：/opt/anaconda 不使用 Conda init 初始化 1 sudo bash ./Anaconda3-2019.07-Linux-x86_64.sh 建立 Anaconda 使用者 1 sudo useradd anaconda 設定資料夾權限 1 2 3 sudo chown -R anaconda:anaconda /opt/anaconda sudo chmod -R</description></item><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>流程 安裝 NVIDIA 顯卡驅動與相關套件 https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10 重開機 測試 1 2 nvidia-smi nvcc -V 編譯測試工具，並進行測試 1 2 3 4 5 cd /usr/local/cuda-10.0/samples sudo make cd bin/x86_64/linux/release sudo ./deviceQuery sudo ./bandwidthTest 安裝 tensorflow-gpu 1 sudo pip3 install tensorflow-gpu 測試 tensorflow 能否抓到 GPU 1 python3</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on KID's Blog</title><link>https://blog.jyhsu.tw/categories/python/</link><description>Recent content in Python on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/python/index.xml" rel="self" type="application/rss+xml"/><item><title>PyCharm 中 OpenCV 自動完成</title><link>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</link><pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在 PyCharm 中，&lt;br>
+若使用較新版本的 OpenCV（&amp;gt;= 4.6），&lt;br>
+會發現 OpenCV 的自動完成功能無法正常運作，&lt;br>
+程式碼對於 &lt;code>cv2&lt;/code> 的靜態檢查亦會提示錯誤。&lt;/p>
+&lt;p>&lt;a class="link" href="https://youtrack.jetbrains.com/issue/PY-54649" target="_blank" rel="noopener"
+>該問題&lt;/a>在 JetBrains 的 YouTrack 上已經被提出許久，&lt;br>
+但目前 JetBrains 與 OpenCV 雙方都未直接解決此問題。&lt;/p>
+&lt;p>這邊提供幾種應急解決方案。&lt;/p>
+&lt;h2 id="解決方案">解決方案
+&lt;/h2>&lt;h3 id="方案-1---使用舊版-opencv">方案 1 - 使用舊版 OpenCV
+&lt;/h3>&lt;p>直接逃避問題，將 OpenCV 指定使用 4.5 當中的最新版本&lt;/p>
+&lt;pre tabindex="0">&lt;code>opencv-python==4.5.5.62
+&lt;/code>&lt;/pre>&lt;h3 id="方案-2---修改直譯器設定使其能夠識別-cv2">方案 2 - 修改直譯器設定，使其能夠識別 &lt;code>cv2&lt;/code>
+&lt;/h3>&lt;p>透過以下方式，使 PyCharm 能夠正確識別 &lt;code>cv2&lt;/code> 套件的界面&lt;/p>
+&lt;ol>
+&lt;li>開啟直譯器設定：&lt;code>File&lt;/code> → &lt;code>Settings...&lt;/code> → &lt;code>Project: &amp;lt;專案名稱&amp;gt;&lt;/code> → &lt;code>Project Interpreter&lt;/code>&lt;/li>
+&lt;li>點擊 &lt;code>Project Interpreter&lt;/code> 的下拉選單，選擇 &lt;code>Show All...&lt;/code>&lt;/li>
+&lt;li>選擇當前使用之直譯器，點擊上方 &lt;code>Show Interpreter Paths&lt;/code> 圖示按鈕&lt;/li>
+&lt;li>點擊 &lt;code>Add&lt;/code> 按鈕，新增一個路徑，路徑為 &lt;code>cv2&lt;/code> 套件的安裝路徑
+&lt;ul>
+&lt;li>例如：使用 &lt;code>venv&lt;/code>，則將 &lt;code>venv/Lib/site-packages/cv2&lt;/code> 新增至其中&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>點擊 &lt;code>OK&lt;/code> 按鈕，完成設定，即可正常使用 OpenCV 的自動完成功能&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting.png"
+width="816"
+height="719"
+srcset="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="272px"
+>&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://youtrack.jetbrains.com/issue/PY-54649" target="_blank" rel="noopener"
+>OpenCV code completion is (still!) not working : PY-54649&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/73174194/opencv-autocomplete-not-working-on-pycharm" target="_blank" rel="noopener"
+>python - opencv autocomplete not working on pycharm - Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>自動切換 tqdm 進度條的顯示模式</title><link>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>使用 Python 時，若須顯示進度條，常會使用 &lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
+>tqdm&lt;/a> 套件來顯示進度條。&lt;/p>
+&lt;h2 id="介紹">介紹
+&lt;/h2>&lt;p>tqdm 是個方便用於顯示進度條的套件，只要簡單的使用 &lt;code>tqdm()&lt;/code> 將要迭代的變數包起來，即可直接顯示進度條&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然而若使用 Jupyter Notebook 來執行，顯示上會怪怪的，&lt;br>
+一般會替換使用專為 Notebook 設計的 &lt;code>tqdm.notebook&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.notebook&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>那如果同一份程式碼，要用於指令界面與 Notebook 呢？&lt;br>
+正好套件也有提供能自動偵測環境的 tqdm&lt;br>
+只要改用 &lt;code>tqdm.auto&lt;/code> 就可以了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.auto&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="結語">結語
+&lt;/h2>&lt;p>用 &lt;code>tqdm.auto&lt;/code> 就對了&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
+>tqdm - A Fast, Extensible Progress Bar for Python and CLI&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>使用 dill 保留 Python Session</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在使用 Python 直譯器或 Jupyter 等工具進行測試時，有時會希望能將變數保留下來，&lt;br>
+通常我們會將變數逐一保存為 &lt;code>pickle&lt;/code>（&lt;code>*.pkl&lt;/code>）檔案，&lt;br>
+但若須保存的變數較多，或希望保存整個 Session 的所有變數，如此操作卻會相當麻煩，&lt;br>
+因此，能夠保存整個 Session 的 dill 套件或許會成為一個更好的選擇。&lt;/p>
+&lt;h2 id="介紹">介紹
+&lt;/h2>&lt;p>dill 可將常見型態的 Python 變數透過序列化的方式保存於 Pickle 檔案，&lt;br>
+並透過反序列化的方式由 Pickle 檔案取回變數到 Session 中。&lt;/p>
+&lt;p>相較於其他序列化／反序列化套件，dill 還可以直接將 Session 中的所有變數進行上述動作。&lt;/p>
+&lt;h2 id="安裝">安裝
+&lt;/h2>&lt;p>直接使用 pip 直接進行套件安裝即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip3 install dill
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="保存-session">保存 Session
+&lt;/h2>&lt;p>將 Session 中的所有變數保存至檔案&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dill&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dill&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dump_session&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;path/to/session.pkl&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="載入-session">載入 Session
+&lt;/h2>&lt;p>載入檔案，將變數取回到 Session 中&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dill&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dill&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load_session&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;path/to/session.pkl&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="注意">注意
+&lt;/h2>&lt;p>若不指定 &lt;code>filename&lt;/code> 參數，將預設為暫存資料夾中的 &lt;code>/tmp/session.pkl&lt;/code>，&lt;br>
+如欲長久保留，或欲區分多個 Session 的變數，建議自行指定檔案路徑&lt;/p>
+&lt;h2 id="實際測試">實際測試
+&lt;/h2>&lt;p>嘗試建立變數，並透過 dill 保存 Session，&lt;br>
+重開一個 Session 後，透過 dill 載入被保存的 Session
+&lt;img src="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png"
+width="586"
+height="401"
+srcset="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="350px"
+>&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://docs.python.org/3/library/pickle.html" target="_blank" rel="noopener"
+>pickle — Python object serialization — Python 3 documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://pypi.org/project/dill/" target="_blank" rel="noopener"
+>dill · PyPI&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>&lt;p>資料處理時，常需要將時間轉換為接近的整點，&lt;br>
+如：9:47 轉換為 10:00；14:03 轉換為 14:00&lt;/p>
+&lt;p>或是以 15 分鐘為區間，&lt;br>
+如：9:47 轉換為 9:45、5:23 轉換為 5:30&lt;/p>
+&lt;p>以下分別介紹 R 與 Python 兩種語言的處理方式&lt;/p>
+&lt;h2 id="r">R
+&lt;/h2>&lt;p>使用 &lt;a class="link" href="https://www.rdocumentation.org/packages/lubridate" target="_blank" rel="noopener"
+>lubridate&lt;/a> 套件中的 &lt;code>round_date&lt;/code>（四捨五入）、&lt;code>floor_date&lt;/code>（向下取整）、&lt;code>ceiling_date&lt;/code>（向上取整）&lt;br>
+三者皆可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-R" data-lang="R">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">as.POSIXct&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2017-10-11 09:49:03&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="python">Python
+&lt;/h2>&lt;p>Python 本身較難處理這類情況，因此會使用 &lt;a class="link" href="https://pandas.pydata.org/" target="_blank" rel="noopener"
+>Pandas&lt;/a> 套件中 &lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.html" target="_blank" rel="noopener"
+>pandas.Series.dt&lt;/a> accessor，使用其 &lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.round.html" target="_blank" rel="noopener"
+>&lt;code>round&lt;/code>&lt;/a>（四捨五入）、&lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.floor.html" target="_blank" rel="noopener"
+>&lt;code>floor&lt;/code>&lt;/a>（向下取整）、&lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.ceil.html" target="_blank" rel="noopener"
+>&lt;code>ceil&lt;/code>&lt;/a>（向上取整）
+亦可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pd&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Series&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2017&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">49&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Python 測試程式碼片段執行時間</title><link>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</link><pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</guid><description>&lt;p>測試 Python 的程式碼片段實際執行所需秒數&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">perf_counter&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Do something&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">perf_counter&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">elapsed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;elapsed:&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">elapsed&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://docs.python.org/3/library/time.html" target="_blank" rel="noopener"
+>time — Time access and conversions — Python 3 documentation&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>下載 Anaconda&lt;br>
+&lt;a class="link" href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener"
+>https://www.anaconda.com/distribution/&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>安裝 Anaconda&lt;br>
+安裝路徑：&lt;strong>/opt/anaconda&lt;/strong>&lt;br>
+不使用 Conda init 初始化&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo bash ./Anaconda3-2019.07-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>建立 Anaconda 使用者&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo useradd anaconda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>設定資料夾權限&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chown -R anaconda:anaconda /opt/anaconda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod -R go-w /opt/anaconda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod -R go+rX /opt/anaconda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>設定 PATH&lt;br>
+（給使用者：）在 &lt;strong>/etc/environment&lt;/strong> 的 PATH 新增 &lt;strong>/opt/anaconda/bin&lt;/strong>&lt;br>
+（給 root：）在 &lt;strong>/etc/profile&lt;/strong> 新增 &lt;strong>export PATH=/opt/anaconda/bin:$PATH&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>更新 conda 本身&lt;br>
+（設定 PATH 給 sudo 比較麻煩，可使用下方方式呼叫，或 sudo -i 進 root 之後使用 conda）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="k">$(&lt;/span>which conda&lt;span class="k">)&lt;/span> update -n base -c defaults conda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>初始化 conda&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化給 Bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化給 Zsh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda init zsh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>關閉登入自動 activate&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">conda config --set auto_activate_base &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://medium.com/@pjptech/installing-anaconda-for-multiple-users-650b2a6666c6" target="_blank" rel="noopener"
+>Installing Anaconda for multiple users – Peter Roche – Medium&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://ithelp.ithome.com.tw/articles/10192460" target="_blank" rel="noopener"
+>[Day01]Anaconda環境安裝！ – iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default" target="_blank" rel="noopener"
+>bash – How do I prevent Conda from activating the base environment by default? – Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>安裝 NVIDIA 顯卡驅動與相關套件&lt;br>
+&lt;a class="link" href="https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10" target="_blank" rel="noopener"
+>https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>重開機&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>測試&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nvidia-smi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvcc -V
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>編譯測試工具，並進行測試&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /usr/local/cuda-10.0/samples
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> bin/x86_64/linux/release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./deviceQuery
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./bandwidthTest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>安裝 tensorflow-gpu&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pip3 install tensorflow-gpu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>測試 tensorflow 能否抓到 GPU&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">python3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tensorflow.python.client&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">device_lib&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">get_available_gpus&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">device_lib&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">list_local_devices&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">device_type&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;GPU&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">get_available_gpus&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>若想防止未來誤更新，可使用 apt-mark 將套件 hold 住&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-mark hold nvidia-418 cuda-10-0 libcudnn7 libcudnn7-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener"
+>GPU support | TensorFlow&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/38559755/how-to-get-current-available-gpus-in-tensorflow/38580201#38580201" target="_blank" rel="noopener"
+>python – How to get current available GPUs in tensorflow? – Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

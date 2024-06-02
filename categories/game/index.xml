@@ -1,1 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game on KID's Blog</title><link>https://blog.jyhsu.tw/categories/game/</link><description>Recent content in Game on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/game/index.xml" rel="self" type="application/rss+xml"/><item><title>Wordle 與類似遊戲</title><link>https://blog.jyhsu.tw/p/wordle/</link><pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/wordle/</guid><description>應該不少人常在 FB、噗浪等平台看過類似這樣的分享↓ Wordle 225 6/6 ⬜🟨⬜⬜⬜ ⬜🟨⬜⬜⬜ ⬜⬜⬜⬜⬜ ⬜🟩🟩⬜⬜ ⬜🟩🟩⬜⬜ 🟩🟩🟩🟩🟩 最近莫名流行的 Wordle 這是一款</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game on KID's Blog</title><link>https://blog.jyhsu.tw/categories/game/</link><description>Recent content in Game on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/game/index.xml" rel="self" type="application/rss+xml"/><item><title>Wordle 與類似遊戲</title><link>https://blog.jyhsu.tw/p/wordle/</link><pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/wordle/</guid><description>&lt;p>應該不少人常在 FB、噗浪等平台看過類似這樣的分享↓&lt;/p>
+&lt;blockquote>
+&lt;p>Wordle 225 6/6&lt;br>
+⬜🟨⬜⬜⬜&lt;br>
+⬜🟨⬜⬜⬜&lt;br>
+⬜⬜⬜⬜⬜&lt;br>
+⬜🟩🟩⬜⬜&lt;br>
+⬜🟩🟩⬜⬜&lt;br>
+🟩🟩🟩🟩🟩&lt;/p>
+&lt;/blockquote>
+&lt;p>最近莫名流行的 Wordle&lt;br>
+這是一款全世界一起參與的猜字遊戲&lt;br>
+每一天只有一題，而且全世界的題目都相同&lt;br>
+遊戲本身也提供分享機制，讓大家能在不洩題的情況下討論、比較戰績&lt;/p>
+&lt;p>遊戲方法與經典的「&lt;a class="link" href="https://zh.wikipedia.org/wiki/%E7%8C%9C%E6%95%B0%E5%AD%97" target="_blank" rel="noopener"
+>1A2B 猜數字&lt;/a>」類似&lt;br>
+目標是猜出所有空格的答案&lt;br>
+而每次作答後，方塊的變化就是該次的正確與否&lt;/p>
+&lt;blockquote>
+&lt;p>🟩：該位置字母正確（1A）&lt;br>
+🟨：字母正確，但位置不對（1B）&lt;br>
+⬜：字母錯誤（該字母沒有出現在單字中）&lt;/p>
+&lt;/blockquote>
+&lt;p>以下彙整最近看到的類似遊戲給各位&lt;br>
+雖然各遊戲有所差異，但規則都大同小異&lt;br>
+順便分享一些小技巧供參考&lt;/p>
+&lt;hr>
+&lt;h2 id="英文wordle---a-daily-word-game">【英文】Wordle - A daily word game
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.powerlanguage.co.uk/wordle/" target="_blank" rel="noopener"
+>https://www.powerlanguage.co.uk/wordle/&lt;/a>&lt;/li>
+&lt;li>猜：英文單字（五個字母）&lt;/li>
+&lt;li>技巧：優先掌握母音&lt;br>
+（例如以：&lt;code>audio&lt;/code>、&lt;code>adieu&lt;/code>、&lt;code>louie&lt;/code> 等包含四個相異母音的單字開始）&lt;/li>
+&lt;li>這系列最初就是由這款開始的&lt;/li>
+&lt;/ul>
+&lt;h2 id="注音注音版-wordle">【注音】注音版 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://words.hk/static/bopomofo-wordle/" target="_blank" rel="noopener"
+>https://words.hk/static/bopomofo-wordle/&lt;/a>&lt;/li>
+&lt;li>猜：構成中文詞語的五個注音符號（不含聲調）&lt;/li>
+&lt;li>技巧：掌握注音排列方式，優先掌握介音（ㄧ、ㄨ、ㄩ）的位置&lt;/li>
+&lt;/ul>
+&lt;h2 id="漢字漢兜---漢字-wordle">【漢字】漢兜 - 漢字 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://handle.antfu.me/" target="_blank" rel="noopener"
+>https://handle.antfu.me/&lt;/a>&lt;/li>
+&lt;li>猜：四字詞語&lt;/li>
+&lt;li>這款比較特別，作答後的不只是文字，連注音符號和聲調都會有顏色指示&lt;/li>
+&lt;li>而且沒限制輸入的必須是詞彙&lt;/li>
+&lt;/ul>
+&lt;h2 id="字母letterle">【字母】Letterle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://edjefferson.com/letterle/" target="_blank" rel="noopener"
+>https://edjefferson.com/letterle/&lt;/a>&lt;/li>
+&lt;li>猜：一個字母&lt;/li>
+&lt;li>全部當中最不需要技巧的一款，相信運氣吧&lt;/li>
+&lt;/ul>
+&lt;h2 id="日文kotobade-asobou-言葉で遊ぼう">【日文】Kotobade Asobou 言葉で遊ぼう
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://taximanli.github.io/kotobade-asobou/" target="_blank" rel="noopener"
+>https://taximanli.github.io/kotobade-asobou/&lt;/a>&lt;/li>
+&lt;li>猜：四個平假名構成的日文詞彙&lt;/li>
+&lt;/ul>
+&lt;h2 id="算術nerdle---the-daily-numbers-game">【算術】Nerdle - the daily numbers game
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://nerdlegame.com/" target="_blank" rel="noopener"
+>https://nerdlegame.com/&lt;/a>&lt;/li>
+&lt;li>猜：八個字的數學表達式&lt;/li>
+&lt;li>技巧：先掌握等號位置&lt;/li>
+&lt;/ul>
+&lt;h2 id="質數primel">【質數】Primel
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://converged.yt/primel/" target="_blank" rel="noopener"
+>https://converged.yt/primel/&lt;/a>&lt;/li>
+&lt;li>猜：五位數的質數&lt;/li>
+&lt;/ul>
+&lt;h2 id="粵拼zidou---粵拼版-wordle">【粵拼】Zidou - 粵拼版 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://chaaklau.github.io/zidou/" target="_blank" rel="noopener"
+>https://chaaklau.github.io/zidou/&lt;/a>&lt;/li>
+&lt;li>猜：單字或詞彙的五個粵拼字母（不含聲調）&lt;/li>
+&lt;/ul>
+&lt;h2 id="倉頡jndle-字道---倉頡版-wordle">【倉頡】JNDLE 字道 - 倉頡版 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="http://samuello.io/jndle/" target="_blank" rel="noopener"
+>http://samuello.io/jndle/&lt;/a>&lt;/li>
+&lt;li>猜：五個倉頡碼&lt;/li>
+&lt;/ul>
+&lt;h2 id="麻將mahjong-handle">【麻將】Mahjong Handle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://mahjong-handle.update.sh/" target="_blank" rel="noopener"
+>https://mahjong-handle.update.sh/&lt;/a>&lt;/li>
+&lt;li>猜：麻將胡牌的手牌（按照萬、筒、條、字與數字大小排列）&lt;/li>
+&lt;/ul>
+&lt;h2 id="四組quordle">【四組】Quordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.quordle.com/" target="_blank" rel="noopener"
+>https://www.quordle.com/&lt;/a>&lt;/li>
+&lt;li>猜：四個英文單字（皆為五個字母）&lt;/li>
+&lt;li>技巧：前幾次猜測，盡可能讓更多的字母出現過&lt;/li>
+&lt;li>一次玩四組 Wordle 的概念，不過每次是同時對四組題目做相同猜測&lt;/li>
+&lt;/ul>
+&lt;h2 id="算術numble">【算術】numble
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://numble.game/" target="_blank" rel="noopener"
+>https://numble.game/&lt;/a>&lt;/li>
+&lt;li>使用可用的數字與運算符號進行連續四則運算，使計算答案盡可能接近目標數字&lt;/li>
+&lt;li>每天一題，但與其他遊戲不同，可以不斷嘗試不同解法，藉此提高成績&lt;/li>
+&lt;/ul>
+&lt;h2 id="地名worldle">【地名】Worldle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://worldle.teuteuf.fr/" target="_blank" rel="noopener"
+>https://worldle.teuteuf.fr/&lt;/a>&lt;/li>
+&lt;li>猜：地名（國家、地區等）&lt;/li>
+&lt;li>每次猜測後，會得到與目標地名的距離與方位，作為下一次猜測的依據&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="終極大技巧">終極大技巧
+&lt;/h2>&lt;ul>
+&lt;li>F12&lt;/li>
+&lt;li>應該很明白了，還不明白又好奇的可以私下問&lt;/li>
+&lt;/ul></description></item></channel></rss>

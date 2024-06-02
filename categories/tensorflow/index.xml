@@ -1,1 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TensorFlow on KID's Blog</title><link>https://blog.jyhsu.tw/categories/tensorflow/</link><description>Recent content in TensorFlow on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 04 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/tensorflow/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>流程 安裝 NVIDIA 顯卡驅動與相關套件 https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10 重開機 測試 1 2 nvidia-smi nvcc -V 編譯測試工具，並進行測試 1 2 3 4 5 cd /usr/local/cuda-10.0/samples sudo make cd bin/x86_64/linux/release sudo ./deviceQuery sudo ./bandwidthTest 安裝 tensorflow-gpu 1 sudo pip3 install tensorflow-gpu 測試 tensorflow 能否抓到 GPU 1 python3</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TensorFlow on KID's Blog</title><link>https://blog.jyhsu.tw/categories/tensorflow/</link><description>Recent content in TensorFlow on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 04 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/tensorflow/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>安裝 NVIDIA 顯卡驅動與相關套件&lt;br>
+&lt;a class="link" href="https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10" target="_blank" rel="noopener"
+>https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>重開機&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>測試&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nvidia-smi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvcc -V
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>編譯測試工具，並進行測試&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /usr/local/cuda-10.0/samples
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> bin/x86_64/linux/release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./deviceQuery
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./bandwidthTest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>安裝 tensorflow-gpu&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pip3 install tensorflow-gpu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>測試 tensorflow 能否抓到 GPU&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">python3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tensorflow.python.client&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">device_lib&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">get_available_gpus&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">device_lib&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">list_local_devices&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">device_type&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;GPU&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">get_available_gpus&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>若想防止未來誤更新，可使用 apt-mark 將套件 hold 住&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-mark hold nvidia-418 cuda-10-0 libcudnn7 libcudnn7-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener"
+>GPU support | TensorFlow&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/38559755/how-to-get-current-available-gpus-in-tensorflow/38580201#38580201" target="_blank" rel="noopener"
+>python – How to get current available GPUs in tensorflow? – Stack Overflow&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

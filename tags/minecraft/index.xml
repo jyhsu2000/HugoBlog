@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minecraft on KID's Blog</title><link>https://blog.jyhsu.tw/tags/minecraft/</link><description>Recent content in Minecraft on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/tags/minecraft/index.xml" rel="self" type="application/rss+xml"/><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>Flyway 是一款資料庫版本控管的解決方案， 方便接上不同類型的資料庫，也能夠輕易實作遷移機制（Migration） 自己撰寫的 Spigot 插件正好需要連結資料庫 原</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minecraft on KID's Blog</title><link>https://blog.jyhsu.tw/tags/minecraft/</link><description>Recent content in Minecraft on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/tags/minecraft/index.xml" rel="self" type="application/rss+xml"/><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>&lt;p>&lt;a class="link" href="https://flywaydb.org/" target="_blank" rel="noopener"
+>Flyway&lt;/a> 是一款資料庫版本控管的解決方案，&lt;br>
+方便接上不同類型的資料庫，也能夠輕易實作遷移機制（Migration）&lt;/p>
+&lt;p>自己撰寫的 Spigot 插件正好需要連結資料庫&lt;br>
+原本苦惱於遷移機制的實作，直到發現 Flyway 具備遷移機制，同時又具有 Java API 可以使用&lt;br>
+就決定是這款了！&lt;/p>
+&lt;p>這篇主要是要記錄自己踩雷的解決方法，就不推坑傳教了&lt;br>
+有興趣自己去 Google&lt;/p>
+&lt;hr>
+&lt;p>在這次撰寫的 Spigot 插件中，打算暫且先以 SQLite 作為資料庫&lt;br>
+於是先安裝了 Flyway 與 SQLite-JDBC&lt;/p>
+&lt;pre tabindex="0">&lt;code>compile &amp;#39;org.flywaydb:flyway-core:5.2.4&amp;#39;
+compile &amp;#39;org.xerial:sqlite-jdbc:3.23.1&amp;#39;
+&lt;/code>&lt;/pre>&lt;p>設定 Flyway&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">configFolder&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">plugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getDataFolder&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">getAbsolutePath&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;jdbc:sqlite:&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">configFolder&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;/database.db&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flyway&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">configure&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">dataSource&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">flyway&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">migrate&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然後他就爆炸了ლ(ﾟдﾟლ)&lt;/p>
+&lt;hr>
+&lt;p>遇到的第一個問題：&lt;/p>
+&lt;pre tabindex="0">&lt;code>FlywayException: Unable to instantiate class org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator
+&lt;/code>&lt;/pre>&lt;p>解決方案：自行指令 LogCreator&lt;br>
+&lt;a class="link" href="https://github.com/flyway/flyway/issues/506" target="_blank" rel="noopener"
+>https://github.com/flyway/flyway/issues/506&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">LogFactory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setLogCreator&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Slf4jLogCreator&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>遇到的第二個問題：&lt;/p>
+&lt;pre tabindex="0">&lt;code>Unable to resolve location classpath:db/migration
+&lt;/code>&lt;/pre>&lt;p>解決方案：自行指定 ClassLoader&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flyway&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">configure&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">getClass&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">getClassLoader&lt;/span>&lt;span class="p">()).&lt;/span>&lt;span class="na">dataSource&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>就這樣，花了半天解決這些問題&lt;br>
+還不錯用，就是資料難找了點…&lt;/p></description></item></channel></rss>

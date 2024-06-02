@@ -1,1 +1,267 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub on KID's Blog</title><link>https://blog.jyhsu.tw/categories/github/</link><description>Recent content in GitHub on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/github/index.xml" rel="self" type="application/rss+xml"/><item><title>用 GitHub 貢獻圖製作貪食蛇動畫</title><link>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</link><pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</guid><description>前言 GitHub 提供了一個有限度自訂個人檔案的功能。 只要在自己的帳號中建立與帳號相同名稱的儲存庫， 其中的 README.md 檔案，將會展示在個人頁面上方。 之前我只放了一</description></item><item><title>決定使用 GitHub Actions 將 Hugo 佈署到 GitHub Pages</title><link>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</link><pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</guid><description>被放棄的方案 過去，在無名小站關閉之後， 主要是使用 WordPress 將網誌架設於自己租用的 VPS。 但堂堂 WordPress 只用來寫網誌好像有點太浪費？ 而且 WordPress 的架設、更新、租用</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub on KID's Blog</title><link>https://blog.jyhsu.tw/categories/github/</link><description>Recent content in GitHub on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/github/index.xml" rel="self" type="application/rss+xml"/><item><title>用 GitHub 貢獻圖製作貪食蛇動畫</title><link>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</link><pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</guid><description>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/github-contribution-grid-snake.svg" alt="Featured image of post 用 GitHub 貢獻圖製作貪食蛇動畫" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>GitHub 提供了一個有限度自訂個人檔案的功能。&lt;br>
+只要在自己的帳號中建立與帳號相同名稱的儲存庫，&lt;br>
+其中的 &lt;code>README.md&lt;/code> 檔案，將會展示在個人頁面上方。&lt;/p>
+&lt;p>之前我只放了一些在 GitHub 活動或紀錄相關的統計圖，&lt;br>
+如星星、提交、PR、Issue 等等的數量，&lt;br>
+以及自己各種語言的使用比例。&lt;/p>
+&lt;p>正好這幾天發現了 &lt;a class="link" href="https://github.com/Platane/snk" target="_blank" rel="noopener"
+>Platane/snk&lt;/a> 這個專案，&lt;br>
+這專案展示了以自己的 GitHub 貢獻圖製作貪食蛇動畫的有趣功能&lt;/p>
+&lt;h3 id="原始貢獻圖">原始貢獻圖
+&lt;/h3>&lt;figure>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/contribution_graph.png">&lt;figcaption>
+&lt;h4>原始貢獻圖&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="貪食蛇動畫">貪食蛇動畫
+&lt;/h3>&lt;figure>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/github-contribution-grid-snake.svg">&lt;figcaption>
+&lt;h4>貪食蛇動畫&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="線上試玩">線上試玩
+&lt;/h2>&lt;p>snk 專案提供了一個線上試玩的頁面，&lt;br>
+進入以下網址後，輸入自己的 GitHub 帳號，即可即時生成貪食蛇動畫&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://platane.github.io/snk/" target="_blank" rel="noopener"
+>https://platane.github.io/snk/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="正式開始">正式開始
+&lt;/h2>&lt;p>由於最終目標是要在 GitHub 個人頁面展示貪食蛇動畫，&lt;br>
+建立與帳號同名儲存庫並建立 &lt;code>README.md&lt;/code> 的流程就請自行參考 GitHub 文件了。&lt;/p>
+&lt;p>這邊主要說明如何利用 GitHub Actions 定時自動更新圖片，並將其展示於上述位置。&lt;/p>
+&lt;p>步驟非常簡單，snk 專案也提供了完整的範例，以下只針對重點說明。&lt;/p>
+&lt;ol>
+&lt;li>進入 GitHub 中與帳號同名的儲存庫，點擊 &lt;code>Actions&lt;/code> 進入 GitHub Actions 頁面&lt;/li>
+&lt;li>點擊 &lt;code>New workflows&lt;/code> 建立新的工作流程&lt;/li>
+&lt;li>檔名自訂（供自己辨識用），內容貼上以下設定，並將 &lt;code>github_user_name&lt;/code> 參數的值改為自己的 GitHub 帳號
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">generate animation&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">schedule&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">cron&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;0 */6 * * *&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># every 6 hours&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">workflow_dispatch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">generate&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">timeout-minutes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">10&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># generates a snake game from a github user (&amp;lt;github_user_name&amp;gt;) contributions graph, output a svg animation at &amp;lt;svg_out_path&amp;gt;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">generate github-contribution-grid-snake.svg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Platane/snk@master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">github_user_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">jyhsu2000&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">svg_out_path&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dist/github-contribution-grid-snake.svg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># push the content of &amp;lt;build_dir&amp;gt; to a branch&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># the content will be available at https://raw.githubusercontent.com/&amp;lt;github_user&amp;gt;/&amp;lt;repository&amp;gt;/&amp;lt;target_branch&amp;gt;/&amp;lt;file&amp;gt; , or as github page&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">push github-contribution-grid-snake.svg to the output branch&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">crazy-max/ghaction-github-pages@v2.5.0&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">target_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">output&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">build_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dist&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>以下針對重點部份簡單說明：
+&lt;ul>
+&lt;li>&lt;code>name&lt;/code>：工作流程名稱（供自己辨識用）。&lt;/li>
+&lt;li>&lt;code>on&lt;/code>：工作流程觸發時機。&lt;br>
+其中 &lt;code>schedule&lt;/code> 為排程執行，我這邊設定為每 6 小時執行一次，撰寫方式可參考 &lt;a class="link" href="https://crontab.guru/" target="_blank" rel="noopener"
+>crontab.guru&lt;/a>；&lt;br>
+（唯須注意 GitHub Actions 重複執行的最小間隔為 5 分鐘）&lt;br>
+而 &lt;code>workflow_dispatch&lt;/code> 則是使該工作流程可以由網頁界面手動觸發。&lt;br>
+&lt;del>（畢竟我不想要為了看結果要等好幾個小時🤣）&lt;/del>&lt;/li>
+&lt;li>&lt;code>jobs&lt;/code>：執行的步驟。&lt;br>
+第一步驟是利用自己的貢獻圖生成貪食蛇動畫，其中 &lt;code>github_user_name&lt;/code> 參數記得改為自己的 GitHub 帳號。&lt;br>
+第二個步驟則是將前一步驟所生成的 svg 圖檔推送至該專案的 &lt;code>output&lt;/code> 分支&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>進入 GitHub Actions 頁面，點擊前面建立的工作流程，並按下 &lt;code>Run workflow&lt;/code> 使其開始執行&lt;/li>
+&lt;li>待執行完成後，即可由專案看到多了一個 &lt;code>output&lt;/code> 分支，進入該分支，找到該檔案&lt;br>
+並於該檔案檢視頁面按下右上角的 &lt;code>raw&lt;/code> 取得實際圖檔網址；或自行使用以下格式
+&lt;pre tabindex="0">&lt;code>https://raw.githubusercontent.com/帳號/儲存庫/output/github-contribution-grid-snake.svg
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>將上述網址以圖片形式加入主要分支的 &lt;code>README.md&lt;/code> 中，如：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![](https://raw.githubusercontent.com/jyhsu2000/jyhsu2000/output/github-contribution-grid-snake.svg)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="成果截圖">成果截圖
+&lt;/h2>&lt;figure>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/profile_readme.png">&lt;figcaption>
+&lt;h4>成果截圖&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme" target="_blank" rel="noopener"
+>Managing your profile README&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/Platane/snk" target="_blank" rel="noopener"
+>Platane/snk - Generates a snake game from a github user contributions graph&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>決定使用 GitHub Actions 將 Hugo 佈署到 GitHub Pages</title><link>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</link><pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</guid><description>&lt;h2 id="被放棄的方案">被放棄的方案
+&lt;/h2>&lt;p>過去，在&lt;a class="link" href="https://zh.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E5%B0%8F%E7%AB%99" target="_blank" rel="noopener"
+>無名小站&lt;/a>關閉之後，&lt;br>
+主要是使用 &lt;a class="link" href="https://tw.wordpress.org/" target="_blank" rel="noopener"
+>WordPress&lt;/a> 將網誌架設於自己租用的 VPS。&lt;br>
+但堂堂 WordPress 只用來寫網誌好像有點太浪費？&lt;br>
+而且 WordPress 的架設、更新、租用 VPS 等也都會是成本。&lt;/p>
+&lt;h2 id="選擇-hugo-與-github-pages">選擇 Hugo 與 GitHub Pages
+&lt;/h2>&lt;p>選擇替代方案時，考量的幾個主要條件：&lt;/p>
+&lt;ul>
+&lt;li>免費&lt;/li>
+&lt;li>持續更新&lt;/li>
+&lt;li>無須準備網站伺服器主機&lt;/li>
+&lt;li>不用花太多時間維護&lt;/li>
+&lt;li>使用 &lt;a class="link" href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener"
+>Markdown&lt;/a> 撰寫&lt;/li>
+&lt;/ul>
+&lt;p>其中希望使用 Markdown 撰寫的原因，不外乎是平常的習慣，在 GitHub、GitLab、HackMD 等網站都是使用 Markdown。&lt;br>
+比起 WordPress 那些強大的文章編輯工具，Markdown 這類簡單的文字格式反而更適合我們有條理的編輯與呈現內容。&lt;/p>
+&lt;p>基於上述考量，認為不見得需要將網誌平台「架設」起來，&lt;br>
+而將整個網誌本身轉換為靜態網頁，或許也是個方案。&lt;br>
+並且若是靜態網站，就可以直接發佈到 &lt;a class="link" href="https://pages.github.com/" target="_blank" rel="noopener"
+>GitHub Pages&lt;/a> 而無須自行架設。&lt;/p>
+&lt;p>因此，決定往「靜態網站產生器」的方向尋找，&lt;br>
+除了以前就知道但一直沒去接觸的 &lt;a class="link" href="https://jekyllrb.com/" target="_blank" rel="noopener"
+>Jekyll&lt;/a> 之外，也得知了 &lt;a class="link" href="https://hexo.io/zh-tw/" target="_blank" rel="noopener"
+>Hexo&lt;/a> 與 &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+>Hugo&lt;/a> 的存在。&lt;br>
+為了從這些當中選出一款來使用，除了各自官方網站的介紹之外，也稍微看了些比較的文章：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/" target="_blank" rel="noopener"
+>靜態網站產生器介紹&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/" target="_blank" rel="noopener"
+>靜態網站產生器大比拚&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>最終選擇了 Hugo 作為網誌的靜態網站產生器&lt;/p>
+&lt;h2 id="實際佈署流程">實際佈署流程
+&lt;/h2>&lt;p>網路上的資料超級多了，這邊就不贅述太細節的事情&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>安裝 &lt;a class="link" href="https://git-scm.com/" target="_blank" rel="noopener"
+>Git&lt;/a> 與 &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+>Hugo&lt;/a>&lt;br>
+須對於指令操作與 Git 版本控制略為熟悉。&lt;br>
+由於平常使用 Windows 作業系統，Hugo 的部份是依照&lt;a class="link" href="https://gohugo.io/getting-started/installing#binary-cross-platform" target="_blank" rel="noopener"
+>安裝說明&lt;/a>直接從 &lt;a class="link" href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener"
+>Hugo 的 GitHub 儲存庫的釋出頁面&lt;/a>下載&lt;br>
+為了面對未知的未來，選擇安裝了標示了 &lt;code>extended&lt;/code> 字樣的擴充版本&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>建立 Hugo 專案，初始化 Git 儲存庫，並新增主題&lt;br>
+Hugo 沒有預設主題，可以直接到 &lt;a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener"
+>Hugo Themes&lt;/a> 尋找&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">hugo new site HugoBlog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> HugoBlog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>將主題中 &lt;code>exampleSite&lt;/code> 資料夾的內容，複製到專案資料夾，並嘗試將 Hugo 執行起來&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">hugo server -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>在 &lt;code>config.yaml&lt;/code> 或 &lt;code>config.toml&lt;/code> 完成設定，並嘗試新增頁面或文章&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>為專案建立 &lt;code>.gitignore&lt;/code> 檔案，避免 Git 追蹤不必要的檔案&lt;br>
+可以直接使用 &lt;a class="link" href="https://gitignore.io/?templates=hugo" target="_blank" rel="noopener"
+>gitignore.io&lt;/a> 網站生成需要忽略的清單&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>建立 GitHub 儲存庫，將專案推送至主線&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>設定 GitHub Actions&lt;br>
+Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener"
+>GitHub Actions for Hugo&lt;/a> 進行專案建置，&lt;br>
+再利用 &lt;a class="link" href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener"
+>GitHub Actions for GitHub Pages&lt;/a> 將建置後的檔案發佈至 GitHub Pages。&lt;br>
+要注意的是，若須自訂域名，須在其中 &lt;a class="link" href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener"
+>actions-gh-pages&lt;/a> 章節的 &lt;code>with&lt;/code> 指令 &lt;code>cname&lt;/code> 參數&lt;br>
+具體可參考&lt;a class="link" href="https://github.com/jyhsu2000/HugoBlog/blob/master/.github/workflows/github-pages.yml" target="_blank" rel="noopener"
+>本網誌的 Workflow&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>設定 GitHub Pages&lt;br>
+&lt;code>Source&lt;/code> 指定為 &lt;code>gh-pages&lt;/code> 分支&lt;br>
+若須自訂域名，設定的域名須與前一步驟相符&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>未來若新增或修改文章，推送至主線後，將自動觸發 GitHub Actions 將網站內容發佈&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="結語">結語
+&lt;/h2>&lt;p>將網誌轉為使用 GitHub Actions 自動將 Hugo 佈署到 GitHub Pages 之後，&lt;br>
+可有效省去維護主機與網站的時間成本與金錢成本。&lt;/p>
+&lt;p>編輯文章方面，我習慣在電腦中使用 &lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
+>VSCode&lt;/a> 編輯，並使用 Hugo 預覽，確認沒問題後，再推送至 GitHub 儲存庫。&lt;br>
+但如果真要方便，也可以直接使用 GitHub 網頁版，或使用 &lt;a class="link" href="https://hackmd.io/" target="_blank" rel="noopener"
+>HackMD&lt;/a>/&lt;a class="link" href="https://hedgedoc.org/" target="_blank" rel="noopener"
+>HedgeDoc&lt;/a> 等平台連動 GitHub 儲存庫的方式進行編輯，&lt;br>
+如此一來，甚至只須使用瀏覽器即可完成文章編修。&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://blog.puckwang.com/post/2020/use-github-actions-deploy-hugo/" target="_blank" rel="noopener"
+>使用 Github Actions 來自動化部署 Hugo 到 Github Pages&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gohugo.io/documentation/" target="_blank" rel="noopener"
+>Hugo Documentation&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

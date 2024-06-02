@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>PyCharm 中 OpenCV 自動完成</title><link>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</link><pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>在 PyCharm 中，&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KID's Blog</title><link>https://blog.jyhsu.tw/</link><description>Recent content on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>PyCharm 中 OpenCV 自動完成</title><link>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</link><pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在 PyCharm 中，&lt;br>
 若使用較新版本的 OpenCV（&amp;gt;= 4.6），&lt;br>
 會發現 OpenCV 的自動完成功能無法正常運作，&lt;br>
 程式碼對於 &lt;code>cv2&lt;/code> 的靜態檢查亦會提示錯誤。&lt;/p>
@@ -7,12 +7,12 @@
 >該問題&lt;/a>在 JetBrains 的 YouTrack 上已經被提出許久，&lt;br>
 但目前 JetBrains 與 OpenCV 雙方都未直接解決此問題。&lt;/p>
 &lt;p>這邊提供幾種應急解決方案。&lt;/p>
-&lt;h2 id="解決方案">解決方案&lt;/h2>
-&lt;h3 id="方案-1---使用舊版-opencv">方案 1 - 使用舊版 OpenCV&lt;/h3>
-&lt;p>直接逃避問題，將 OpenCV 指定使用 4.5 當中的最新版本&lt;/p>
-&lt;pre>&lt;code>opencv-python==4.5.5.62
-&lt;/code>&lt;/pre>&lt;h3 id="方案-2---修改直譯器設定使其能夠識別-cv2">方案 2 - 修改直譯器設定，使其能夠識別 &lt;code>cv2&lt;/code>&lt;/h3>
-&lt;p>透過以下方式，使 PyCharm 能夠正確識別 &lt;code>cv2&lt;/code> 套件的界面&lt;/p>
+&lt;h2 id="解決方案">解決方案
+&lt;/h2>&lt;h3 id="方案-1---使用舊版-opencv">方案 1 - 使用舊版 OpenCV
+&lt;/h3>&lt;p>直接逃避問題，將 OpenCV 指定使用 4.5 當中的最新版本&lt;/p>
+&lt;pre tabindex="0">&lt;code>opencv-python==4.5.5.62
+&lt;/code>&lt;/pre>&lt;h3 id="方案-2---修改直譯器設定使其能夠識別-cv2">方案 2 - 修改直譯器設定，使其能夠識別 &lt;code>cv2&lt;/code>
+&lt;/h3>&lt;p>透過以下方式，使 PyCharm 能夠正確識別 &lt;code>cv2&lt;/code> 套件的界面&lt;/p>
 &lt;ol>
 &lt;li>開啟直譯器設定：&lt;code>File&lt;/code> → &lt;code>Settings...&lt;/code> → &lt;code>Project: &amp;lt;專案名稱&amp;gt;&lt;/code> → &lt;code>Project Interpreter&lt;/code>&lt;/li>
 &lt;li>點擊 &lt;code>Project Interpreter&lt;/code> 的下拉選單，選擇 &lt;code>Show All...&lt;/code>&lt;/li>
@@ -24,23 +24,17 @@
 &lt;/li>
 &lt;li>點擊 &lt;code>OK&lt;/code> 按鈕，完成設定，即可正常使用 OpenCV 的自動完成功能&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 113;
-flex-basis: 272px"
->
-&lt;a href="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting.png" data-size="816x719">
-&lt;img src="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting.png"
+&lt;p>&lt;img src="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting.png"
 width="816"
 height="719"
-srcset="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_1024x0_resize_box_2.png 1024w"
+srcset="https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/pycharm-%E4%B8%AD-opencv-%E8%87%AA%E5%8B%95%E5%AE%8C%E6%88%90/python_interpreter_setting_hu7ee2e15883ac7986fbaf4c7f2288249d_34759_1024x0_resize_box_3.png 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="272px"
+>&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://youtrack.jetbrains.com/issue/PY-54649" target="_blank" rel="noopener"
 >OpenCV code completion is (still!) not working : PY-54649&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/73174194/opencv-autocomplete-not-working-on-pycharm" target="_blank" rel="noopener"
@@ -72,212 +66,219 @@ loading="lazy"
 雖然各遊戲有所差異，但規則都大同小異&lt;br>
 順便分享一些小技巧供參考&lt;/p>
 &lt;hr>
-&lt;h2 id="英文wordle---a-daily-word-game">【英文】Wordle - A daily word game&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://www.powerlanguage.co.uk/wordle/">https://www.powerlanguage.co.uk/wordle/&lt;/a>&lt;/li>
+&lt;h2 id="英文wordle---a-daily-word-game">【英文】Wordle - A daily word game
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.powerlanguage.co.uk/wordle/" target="_blank" rel="noopener"
+>https://www.powerlanguage.co.uk/wordle/&lt;/a>&lt;/li>
 &lt;li>猜：英文單字（五個字母）&lt;/li>
 &lt;li>技巧：優先掌握母音&lt;br>
 （例如以：&lt;code>audio&lt;/code>、&lt;code>adieu&lt;/code>、&lt;code>louie&lt;/code> 等包含四個相異母音的單字開始）&lt;/li>
 &lt;li>這系列最初就是由這款開始的&lt;/li>
 &lt;/ul>
-&lt;h2 id="注音注音版-wordle">【注音】注音版 Wordle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://words.hk/static/bopomofo-wordle/">https://words.hk/static/bopomofo-wordle/&lt;/a>&lt;/li>
+&lt;h2 id="注音注音版-wordle">【注音】注音版 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://words.hk/static/bopomofo-wordle/" target="_blank" rel="noopener"
+>https://words.hk/static/bopomofo-wordle/&lt;/a>&lt;/li>
 &lt;li>猜：構成中文詞語的五個注音符號（不含聲調）&lt;/li>
 &lt;li>技巧：掌握注音排列方式，優先掌握介音（ㄧ、ㄨ、ㄩ）的位置&lt;/li>
 &lt;/ul>
-&lt;h2 id="漢字漢兜---漢字-wordle">【漢字】漢兜 - 漢字 Wordle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://handle.antfu.me/">https://handle.antfu.me/&lt;/a>&lt;/li>
+&lt;h2 id="漢字漢兜---漢字-wordle">【漢字】漢兜 - 漢字 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://handle.antfu.me/" target="_blank" rel="noopener"
+>https://handle.antfu.me/&lt;/a>&lt;/li>
 &lt;li>猜：四字詞語&lt;/li>
 &lt;li>這款比較特別，作答後的不只是文字，連注音符號和聲調都會有顏色指示&lt;/li>
 &lt;li>而且沒限制輸入的必須是詞彙&lt;/li>
 &lt;/ul>
-&lt;h2 id="字母letterle">【字母】Letterle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://edjefferson.com/letterle/">https://edjefferson.com/letterle/&lt;/a>&lt;/li>
+&lt;h2 id="字母letterle">【字母】Letterle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://edjefferson.com/letterle/" target="_blank" rel="noopener"
+>https://edjefferson.com/letterle/&lt;/a>&lt;/li>
 &lt;li>猜：一個字母&lt;/li>
 &lt;li>全部當中最不需要技巧的一款，相信運氣吧&lt;/li>
 &lt;/ul>
-&lt;h2 id="日文kotobade-asobou-言葉で遊ぼう">【日文】Kotobade Asobou 言葉で遊ぼう&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://taximanli.github.io/kotobade-asobou/">https://taximanli.github.io/kotobade-asobou/&lt;/a>&lt;/li>
+&lt;h2 id="日文kotobade-asobou-言葉で遊ぼう">【日文】Kotobade Asobou 言葉で遊ぼう
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://taximanli.github.io/kotobade-asobou/" target="_blank" rel="noopener"
+>https://taximanli.github.io/kotobade-asobou/&lt;/a>&lt;/li>
 &lt;li>猜：四個平假名構成的日文詞彙&lt;/li>
 &lt;/ul>
-&lt;h2 id="算術nerdle---the-daily-numbers-game">【算術】Nerdle - the daily numbers game&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://nerdlegame.com/">https://nerdlegame.com/&lt;/a>&lt;/li>
+&lt;h2 id="算術nerdle---the-daily-numbers-game">【算術】Nerdle - the daily numbers game
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://nerdlegame.com/" target="_blank" rel="noopener"
+>https://nerdlegame.com/&lt;/a>&lt;/li>
 &lt;li>猜：八個字的數學表達式&lt;/li>
 &lt;li>技巧：先掌握等號位置&lt;/li>
 &lt;/ul>
-&lt;h2 id="質數primel">【質數】Primel&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://converged.yt/primel/">https://converged.yt/primel/&lt;/a>&lt;/li>
+&lt;h2 id="質數primel">【質數】Primel
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://converged.yt/primel/" target="_blank" rel="noopener"
+>https://converged.yt/primel/&lt;/a>&lt;/li>
 &lt;li>猜：五位數的質數&lt;/li>
 &lt;/ul>
-&lt;h2 id="粵拼zidou---粵拼版-wordle">【粵拼】Zidou - 粵拼版 Wordle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://chaaklau.github.io/zidou/">https://chaaklau.github.io/zidou/&lt;/a>&lt;/li>
+&lt;h2 id="粵拼zidou---粵拼版-wordle">【粵拼】Zidou - 粵拼版 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://chaaklau.github.io/zidou/" target="_blank" rel="noopener"
+>https://chaaklau.github.io/zidou/&lt;/a>&lt;/li>
 &lt;li>猜：單字或詞彙的五個粵拼字母（不含聲調）&lt;/li>
 &lt;/ul>
-&lt;h2 id="倉頡jndle-字道---倉頡版-wordle">【倉頡】JNDLE 字道 - 倉頡版 Wordle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="http://samuello.io/jndle/">http://samuello.io/jndle/&lt;/a>&lt;/li>
+&lt;h2 id="倉頡jndle-字道---倉頡版-wordle">【倉頡】JNDLE 字道 - 倉頡版 Wordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="http://samuello.io/jndle/" target="_blank" rel="noopener"
+>http://samuello.io/jndle/&lt;/a>&lt;/li>
 &lt;li>猜：五個倉頡碼&lt;/li>
 &lt;/ul>
-&lt;h2 id="麻將mahjong-handle">【麻將】Mahjong Handle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://mahjong-handle.update.sh/">https://mahjong-handle.update.sh/&lt;/a>&lt;/li>
+&lt;h2 id="麻將mahjong-handle">【麻將】Mahjong Handle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://mahjong-handle.update.sh/" target="_blank" rel="noopener"
+>https://mahjong-handle.update.sh/&lt;/a>&lt;/li>
 &lt;li>猜：麻將胡牌的手牌（按照萬、筒、條、字與數字大小排列）&lt;/li>
 &lt;/ul>
-&lt;h2 id="四組quordle">【四組】Quordle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://www.quordle.com/">https://www.quordle.com/&lt;/a>&lt;/li>
+&lt;h2 id="四組quordle">【四組】Quordle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.quordle.com/" target="_blank" rel="noopener"
+>https://www.quordle.com/&lt;/a>&lt;/li>
 &lt;li>猜：四個英文單字（皆為五個字母）&lt;/li>
 &lt;li>技巧：前幾次猜測，盡可能讓更多的字母出現過&lt;/li>
 &lt;li>一次玩四組 Wordle 的概念，不過每次是同時對四組題目做相同猜測&lt;/li>
 &lt;/ul>
-&lt;h2 id="算術numble">【算術】numble&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://numble.game/">https://numble.game/&lt;/a>&lt;/li>
+&lt;h2 id="算術numble">【算術】numble
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://numble.game/" target="_blank" rel="noopener"
+>https://numble.game/&lt;/a>&lt;/li>
 &lt;li>使用可用的數字與運算符號進行連續四則運算，使計算答案盡可能接近目標數字&lt;/li>
 &lt;li>每天一題，但與其他遊戲不同，可以不斷嘗試不同解法，藉此提高成績&lt;/li>
 &lt;/ul>
-&lt;h2 id="地名worldle">【地名】Worldle&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://worldle.teuteuf.fr/">https://worldle.teuteuf.fr/&lt;/a>&lt;/li>
+&lt;h2 id="地名worldle">【地名】Worldle
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://worldle.teuteuf.fr/" target="_blank" rel="noopener"
+>https://worldle.teuteuf.fr/&lt;/a>&lt;/li>
 &lt;li>猜：地名（國家、地區等）&lt;/li>
 &lt;li>每次猜測後，會得到與目標地名的距離與方位，作為下一次猜測的依據&lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h2 id="終極大技巧">終極大技巧&lt;/h2>
-&lt;ul>
+&lt;h2 id="終極大技巧">終極大技巧
+&lt;/h2>&lt;ul>
 &lt;li>F12&lt;/li>
 &lt;li>應該很明白了，還不明白又好奇的可以私下問&lt;/li>
-&lt;/ul></description></item><item><title>自動切換 tqdm 進度條的顯示模式</title><link>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>使用 Python 時，若須顯示進度條，常會使用 &lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
+&lt;/ul></description></item><item><title>自動切換 tqdm 進度條的顯示模式</title><link>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%87%AA%E5%8B%95%E5%88%87%E6%8F%9B-tqdm-%E9%80%B2%E5%BA%A6%E6%A2%9D%E7%9A%84%E9%A1%AF%E7%A4%BA%E6%A8%A1%E5%BC%8F/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>使用 Python 時，若須顯示進度條，常會使用 &lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
 >tqdm&lt;/a> 套件來顯示進度條。&lt;/p>
-&lt;h2 id="介紹">介紹&lt;/h2>
-&lt;p>tqdm 是個方便用於顯示進度條的套件，只要簡單的使用 &lt;code>tqdm()&lt;/code> 將要迭代的變數包起來，即可直接顯示進度條&lt;/p>
+&lt;h2 id="介紹">介紹
+&lt;/h2>&lt;p>tqdm 是個方便用於顯示進度條的套件，只要簡單的使用 &lt;code>tqdm()&lt;/code> 將要迭代的變數包起來，即可直接顯示進度條&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
-&lt;span class="o">...&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然而若使用 Jupyter Notebook 來執行，顯示上會怪怪的，&lt;br>
 一般會替換使用專為 Notebook 設計的 &lt;code>tqdm.notebook&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.notebook&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
-&lt;span class="o">...&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.notebook&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>那如果同一份程式碼，要用於指令界面與 Notebook 呢？&lt;br>
 正好套件也有提供能自動偵測環境的 tqdm&lt;br>
 只要改用 &lt;code>tqdm.auto&lt;/code> 就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.auto&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
-&lt;span class="o">...&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm.auto&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="結語">結語&lt;/h2>
-&lt;p>用 &lt;code>tqdm.auto&lt;/code> 就對了&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="結語">結語
+&lt;/h2>&lt;p>用 &lt;code>tqdm.auto&lt;/code> 就對了&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/tqdm/tqdm" target="_blank" rel="noopener"
 >tqdm - A Fast, Extensible Progress Bar for Python and CLI&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>使用 dill 保留 Python Session</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>在使用 Python 直譯器或 Jupyter 等工具進行測試時，有時會希望能將變數保留下來，&lt;br>
+&lt;/ul></description></item><item><title>使用 dill 保留 Python Session</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在使用 Python 直譯器或 Jupyter 等工具進行測試時，有時會希望能將變數保留下來，&lt;br>
 通常我們會將變數逐一保存為 &lt;code>pickle&lt;/code>（&lt;code>*.pkl&lt;/code>）檔案，&lt;br>
 但若須保存的變數較多，或希望保存整個 Session 的所有變數，如此操作卻會相當麻煩，&lt;br>
 因此，能夠保存整個 Session 的 dill 套件或許會成為一個更好的選擇。&lt;/p>
-&lt;h2 id="介紹">介紹&lt;/h2>
-&lt;p>dill 可將常見型態的 Python 變數透過序列化的方式保存於 Pickle 檔案，&lt;br>
+&lt;h2 id="介紹">介紹
+&lt;/h2>&lt;p>dill 可將常見型態的 Python 變數透過序列化的方式保存於 Pickle 檔案，&lt;br>
 並透過反序列化的方式由 Pickle 檔案取回變數到 Session 中。&lt;/p>
 &lt;p>相較於其他序列化／反序列化套件，dill 還可以直接將 Session 中的所有變數進行上述動作。&lt;/p>
-&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;p>直接使用 pip 直接進行套件安裝即可&lt;/p>
+&lt;h2 id="安裝">安裝
+&lt;/h2>&lt;p>直接使用 pip 直接進行套件安裝即可&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">pip3 install dill
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip3 install dill
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="保存-session">保存 Session&lt;/h2>
-&lt;p>將 Session 中的所有變數保存至檔案&lt;/p>
+&lt;/div>&lt;h2 id="保存-session">保存 Session
+&lt;/h2>&lt;p>將 Session 中的所有變數保存至檔案&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dill&lt;/span>
-&lt;span class="n">dill&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dump_session&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;path/to/session.pkl&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dill&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dill&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dump_session&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;path/to/session.pkl&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="載入-session">載入 Session&lt;/h2>
-&lt;p>載入檔案，將變數取回到 Session 中&lt;/p>
+&lt;/div>&lt;h2 id="載入-session">載入 Session
+&lt;/h2>&lt;p>載入檔案，將變數取回到 Session 中&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dill&lt;/span>
-&lt;span class="n">dill&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load_session&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;path/to/session.pkl&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dill&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dill&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load_session&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;path/to/session.pkl&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="注意">注意&lt;/h2>
-&lt;p>若不指定 &lt;code>filename&lt;/code> 參數，將預設為暫存資料夾中的 &lt;code>/tmp/session.pkl&lt;/code>，&lt;br>
+&lt;/div>&lt;h2 id="注意">注意
+&lt;/h2>&lt;p>若不指定 &lt;code>filename&lt;/code> 參數，將預設為暫存資料夾中的 &lt;code>/tmp/session.pkl&lt;/code>，&lt;br>
 如欲長久保留，或欲區分多個 Session 的變數，建議自行指定檔案路徑&lt;/p>
-&lt;h2 id="實際測試">實際測試&lt;/h2>
-&lt;p>嘗試建立變數，並透過 dill 保存 Session，&lt;br>
+&lt;h2 id="實際測試">實際測試
+&lt;/h2>&lt;p>嘗試建立變數，並透過 dill 保存 Session，&lt;br>
 重開一個 Session 後，透過 dill 載入被保存的 Session
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 146;
-flex-basis: 350px"
->
-&lt;a href="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png" data-size="586x401">
 &lt;img src="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo.png"
 width="586"
 height="401"
-srcset="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_1024x0_resize_box_2.png 1024w"
+srcset="https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-dill-%E4%BF%9D%E7%95%99-python-session/demo_hu22f8c933918363ac9200face6d3493c1_20009_1024x0_resize_box_3.png 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="350px"
+>&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://docs.python.org/3/library/pickle.html" target="_blank" rel="noopener"
 >pickle — Python object serialization — Python 3 documentation&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pypi.org/project/dill/" target="_blank" rel="noopener"
 >dill · PyPI&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>用 GitHub 貢獻圖製作貪食蛇動畫</title><link>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</link><pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</guid><description>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/github-contribution-grid-snake.svg" alt="Featured image of post 用 GitHub 貢獻圖製作貪食蛇動畫" />&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>GitHub 提供了一個有限度自訂個人檔案的功能。&lt;br>
+&lt;/ul></description></item><item><title>用 GitHub 貢獻圖製作貪食蛇動畫</title><link>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</link><pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/</guid><description>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/github-contribution-grid-snake.svg" alt="Featured image of post 用 GitHub 貢獻圖製作貪食蛇動畫" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>GitHub 提供了一個有限度自訂個人檔案的功能。&lt;br>
 只要在自己的帳號中建立與帳號相同名稱的儲存庫，&lt;br>
 其中的 &lt;code>README.md&lt;/code> 檔案，將會展示在個人頁面上方。&lt;/p>
 &lt;p>之前我只放了一些在 GitHub 活動或紀錄相關的統計圖，&lt;br>
@@ -286,25 +287,25 @@ loading="lazy"
 &lt;p>正好這幾天發現了 &lt;a class="link" href="https://github.com/Platane/snk" target="_blank" rel="noopener"
 >Platane/snk&lt;/a> 這個專案，&lt;br>
 這專案展示了以自己的 GitHub 貢獻圖製作貪食蛇動畫的有趣功能&lt;/p>
-&lt;h3 id="原始貢獻圖">原始貢獻圖&lt;/h3>
-&lt;figure>&lt;img src="contribution_graph.png"/>&lt;figcaption>
+&lt;h3 id="原始貢獻圖">原始貢獻圖
+&lt;/h3>&lt;figure>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/contribution_graph.png">&lt;figcaption>
 &lt;h4>原始貢獻圖&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h3 id="貪食蛇動畫">貪食蛇動畫&lt;/h3>
-&lt;figure>&lt;img src="github-contribution-grid-snake.svg"/>&lt;figcaption>
+&lt;h3 id="貪食蛇動畫">貪食蛇動畫
+&lt;/h3>&lt;figure>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/github-contribution-grid-snake.svg">&lt;figcaption>
 &lt;h4>貪食蛇動畫&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h2 id="線上試玩">線上試玩&lt;/h2>
-&lt;p>snk 專案提供了一個線上試玩的頁面，&lt;br>
+&lt;h2 id="線上試玩">線上試玩
+&lt;/h2>&lt;p>snk 專案提供了一個線上試玩的頁面，&lt;br>
 進入以下網址後，輸入自己的 GitHub 帳號，即可即時生成貪食蛇動畫&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://platane.github.io/snk/" target="_blank" rel="noopener"
 >https://platane.github.io/snk/&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="正式開始">正式開始&lt;/h2>
-&lt;p>由於最終目標是要在 GitHub 個人頁面展示貪食蛇動畫，&lt;br>
+&lt;h2 id="正式開始">正式開始
+&lt;/h2>&lt;p>由於最終目標是要在 GitHub 個人頁面展示貪食蛇動畫，&lt;br>
 建立與帳號同名儲存庫並建立 &lt;code>README.md&lt;/code> 的流程就請自行參考 GitHub 文件了。&lt;/p>
 &lt;p>這邊主要說明如何利用 GitHub Actions 定時自動更新圖片，並將其展示於上述位置。&lt;/p>
 &lt;p>步驟非常簡單，snk 專案也提供了完整的範例，以下只針對重點說明。&lt;/p>
@@ -314,7 +315,7 @@ loading="lazy"
 &lt;li>檔名自訂（供自己辨識用），內容貼上以下設定，並將 &lt;code>github_user_name&lt;/code> 參數的值改為自己的 GitHub 帳號
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
 &lt;/span>&lt;span class="lnt"> 3
 &lt;/span>&lt;span class="lnt"> 4
@@ -345,38 +346,38 @@ loading="lazy"
 &lt;/span>&lt;span class="lnt">29
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">generate animation&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">schedule&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">cron&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;0 */6 * * *&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># every 6 hours&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">workflow_dispatch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">generate&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">timeout-minutes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">10&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># generates a snake game from a github user (&amp;lt;github_user_name&amp;gt;) contributions graph, output a svg animation at &amp;lt;svg_out_path&amp;gt;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">generate github-contribution-grid-snake.svg&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Platane/snk@master&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">github_user_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">jyhsu2000&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">svg_out_path&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dist/github-contribution-grid-snake.svg&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># push the content of &amp;lt;build_dir&amp;gt; to a branch&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># the content will be available at https://raw.githubusercontent.com/&amp;lt;github_user&amp;gt;/&amp;lt;repository&amp;gt;/&amp;lt;target_branch&amp;gt;/&amp;lt;file&amp;gt; , or as github page&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">push github-contribution-grid-snake.svg to the output branch&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">crazy-max/ghaction-github-pages@v2.5.0&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">target_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">output&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">build_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dist&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">generate animation&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">schedule&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">cron&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;0 */6 * * *&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># every 6 hours&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">workflow_dispatch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">generate&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">timeout-minutes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">10&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># generates a snake game from a github user (&amp;lt;github_user_name&amp;gt;) contributions graph, output a svg animation at &amp;lt;svg_out_path&amp;gt;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">generate github-contribution-grid-snake.svg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Platane/snk@master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">github_user_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">jyhsu2000&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">svg_out_path&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dist/github-contribution-grid-snake.svg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># push the content of &amp;lt;build_dir&amp;gt; to a branch&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># the content will be available at https://raw.githubusercontent.com/&amp;lt;github_user&amp;gt;/&amp;lt;repository&amp;gt;/&amp;lt;target_branch&amp;gt;/&amp;lt;file&amp;gt; , or as github page&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">push github-contribution-grid-snake.svg to the output branch&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">crazy-max/ghaction-github-pages@v2.5.0&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">target_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">output&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">build_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dist&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>以下針對重點部份簡單說明：&lt;/p>
+&lt;/div>以下針對重點部份簡單說明：
 &lt;ul>
 &lt;li>&lt;code>name&lt;/code>：工作流程名稱（供自己辨識用）。&lt;/li>
 &lt;li>&lt;code>on&lt;/code>：工作流程觸發時機。&lt;br>
@@ -393,39 +394,39 @@ loading="lazy"
 &lt;li>進入 GitHub Actions 頁面，點擊前面建立的工作流程，並按下 &lt;code>Run workflow&lt;/code> 使其開始執行&lt;/li>
 &lt;li>待執行完成後，即可由專案看到多了一個 &lt;code>output&lt;/code> 分支，進入該分支，找到該檔案&lt;br>
 並於該檔案檢視頁面按下右上角的 &lt;code>raw&lt;/code> 取得實際圖檔網址；或自行使用以下格式
-&lt;pre>&lt;code>https://raw.githubusercontent.com/帳號/儲存庫/output/github-contribution-grid-snake.svg
+&lt;pre tabindex="0">&lt;code>https://raw.githubusercontent.com/帳號/儲存庫/output/github-contribution-grid-snake.svg
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;li>將上述網址以圖片形式加入主要分支的 &lt;code>README.md&lt;/code> 中，如：
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-markdown" data-lang="markdown">![](https://raw.githubusercontent.com/jyhsu2000/jyhsu2000/output/github-contribution-grid-snake.svg)
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![](https://raw.githubusercontent.com/jyhsu2000/jyhsu2000/output/github-contribution-grid-snake.svg)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;/ol>
-&lt;h2 id="成果截圖">成果截圖&lt;/h2>
-&lt;figure>&lt;img src="profile_readme.png"/>&lt;figcaption>
+&lt;h2 id="成果截圖">成果截圖
+&lt;/h2>&lt;figure>&lt;img src="https://blog.jyhsu.tw/p/%E7%94%A8-github-%E8%B2%A2%E7%8D%BB%E5%9C%96%E8%A3%BD%E4%BD%9C%E8%B2%AA%E9%A3%9F%E8%9B%87%E5%8B%95%E7%95%AB/profile_readme.png">&lt;figcaption>
 &lt;h4>成果截圖&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme" target="_blank" rel="noopener"
 >Managing your profile README&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/Platane/snk" target="_blank" rel="noopener"
 >Platane/snk - Generates a snake game from a github user contributions graph&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>決定使用 GitHub Actions 將 Hugo 佈署到 GitHub Pages</title><link>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</link><pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</guid><description>&lt;h2 id="被放棄的方案">被放棄的方案&lt;/h2>
-&lt;p>過去，在&lt;a class="link" href="https://zh.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E5%B0%8F%E7%AB%99" target="_blank" rel="noopener"
+&lt;/ul></description></item><item><title>決定使用 GitHub Actions 將 Hugo 佈署到 GitHub Pages</title><link>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</link><pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B1%BA%E5%AE%9A%E4%BD%BF%E7%94%A8-github-actions-%E5%B0%87-hugo-%E4%BD%88%E7%BD%B2%E5%88%B0-github-pages/</guid><description>&lt;h2 id="被放棄的方案">被放棄的方案
+&lt;/h2>&lt;p>過去，在&lt;a class="link" href="https://zh.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E5%B0%8F%E7%AB%99" target="_blank" rel="noopener"
 >無名小站&lt;/a>關閉之後，&lt;br>
 主要是使用 &lt;a class="link" href="https://tw.wordpress.org/" target="_blank" rel="noopener"
 >WordPress&lt;/a> 將網誌架設於自己租用的 VPS。&lt;br>
 但堂堂 WordPress 只用來寫網誌好像有點太浪費？&lt;br>
 而且 WordPress 的架設、更新、租用 VPS 等也都會是成本。&lt;/p>
-&lt;h2 id="選擇-hugo-與-github-pages">選擇 Hugo 與 GitHub Pages&lt;/h2>
-&lt;p>選擇替代方案時，考量的幾個主要條件：&lt;/p>
+&lt;h2 id="選擇-hugo-與-github-pages">選擇 Hugo 與 GitHub Pages
+&lt;/h2>&lt;p>選擇替代方案時，考量的幾個主要條件：&lt;/p>
 &lt;ul>
 &lt;li>免費&lt;/li>
 &lt;li>持續更新&lt;/li>
@@ -453,8 +454,8 @@ loading="lazy"
 >靜態網站產生器大比拚&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>最終選擇了 Hugo 作為網誌的靜態網站產生器&lt;/p>
-&lt;h2 id="實際佈署流程">實際佈署流程&lt;/h2>
-&lt;p>網路上的資料超級多了，這邊就不贅述太細節的事情&lt;/p>
+&lt;h2 id="實際佈署流程">實際佈署流程
+&lt;/h2>&lt;p>網路上的資料超級多了，這邊就不贅述太細節的事情&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>安裝 &lt;a class="link" href="https://git-scm.com/" target="_blank" rel="noopener"
@@ -472,28 +473,28 @@ Hugo 沒有預設主題，可以直接到 &lt;a class="link" href="https://theme
 >Hugo Themes&lt;/a> 尋找&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">hugo new site HugoBlog
-&lt;span class="nb">cd&lt;/span> HugoBlog
-git init
-git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">hugo new site HugoBlog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> HugoBlog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>將主題中 &lt;code>exampleSite&lt;/code> 資料夾的內容，複製到專案資料夾，並嘗試將 Hugo 執行起來&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">hugo server -D
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">hugo server -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
@@ -527,8 +528,8 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 &lt;p>未來若新增或修改文章，推送至主線後，將自動觸發 GitHub Actions 將網站內容發佈&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;h2 id="結語">結語&lt;/h2>
-&lt;p>將網誌轉為使用 GitHub Actions 自動將 Hugo 佈署到 GitHub Pages 之後，&lt;br>
+&lt;h2 id="結語">結語
+&lt;/h2>&lt;p>將網誌轉為使用 GitHub Actions 自動將 Hugo 佈署到 GitHub Pages 之後，&lt;br>
 可有效省去維護主機與網站的時間成本與金錢成本。&lt;/p>
 &lt;p>編輯文章方面，我習慣在電腦中使用 &lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
 >VSCode&lt;/a> 編輯，並使用 Hugo 預覽，確認沒問題後，再推送至 GitHub 儲存庫。&lt;br>
@@ -536,8 +537,8 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 >HackMD&lt;/a>/&lt;a class="link" href="https://hedgedoc.org/" target="_blank" rel="noopener"
 >HedgeDoc&lt;/a> 等平台連動 GitHub 儲存庫的方式進行編輯，&lt;br>
 如此一來，甚至只須使用瀏覽器即可完成文章編修。&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://blog.puckwang.com/post/2020/use-github-actions-deploy-hugo/" target="_blank" rel="noopener"
 >使用 Github Actions 來自動化部署 Hugo 到 Github Pages&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gohugo.io/documentation/" target="_blank" rel="noopener"
@@ -546,8 +547,8 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡&lt;/p>
 &lt;p>總之先試著&lt;br>
 把之前在 WordPress 上的文章都搬過來了&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo: The world&amp;rsquo;s fastest framework for building websites&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener"
@@ -557,13 +558,13 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 &lt;p>或是以 15 分鐘為區間，&lt;br>
 如：9:47 轉換為 9:45、5:23 轉換為 5:30&lt;/p>
 &lt;p>以下分別介紹 R 與 Python 兩種語言的處理方式&lt;/p>
-&lt;h2 id="r">R&lt;/h2>
-&lt;p>使用 &lt;a class="link" href="https://www.rdocumentation.org/packages/lubridate" target="_blank" rel="noopener"
+&lt;h2 id="r">R
+&lt;/h2>&lt;p>使用 &lt;a class="link" href="https://www.rdocumentation.org/packages/lubridate" target="_blank" rel="noopener"
 >lubridate&lt;/a> 套件中的 &lt;code>round_date&lt;/code>（四捨五入）、&lt;code>floor_date&lt;/code>（向下取整）、&lt;code>ceiling_date&lt;/code>（向上取整）&lt;br>
 三者皆可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
 &lt;/span>&lt;span class="lnt"> 3
 &lt;/span>&lt;span class="lnt"> 4
@@ -578,20 +579,23 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 &lt;/span>&lt;span class="lnt">13
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-R" data-lang="R">&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">as.POSIXct&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2017-10-11 09:49:03&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-R" data-lang="R">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">as.POSIXct&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2017-10-11 09:49:03&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="python">Python&lt;/h2>
-&lt;p>Python 本身較難處理這類情況，因此會使用 &lt;a class="link" href="https://pandas.pydata.org/" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="python">Python
+&lt;/h2>&lt;p>Python 本身較難處理這類情況，因此會使用 &lt;a class="link" href="https://pandas.pydata.org/" target="_blank" rel="noopener"
 >Pandas&lt;/a> 套件中 &lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.html" target="_blank" rel="noopener"
 >pandas.Series.dt&lt;/a> accessor，使用其 &lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.round.html" target="_blank" rel="noopener"
 >&lt;code>round&lt;/code>&lt;/a>（四捨五入）、&lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.floor.html" target="_blank" rel="noopener"
@@ -600,7 +604,7 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 亦可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
 &lt;/span>&lt;span class="lnt"> 3
 &lt;/span>&lt;span class="lnt"> 4
@@ -615,17 +619,20 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 &lt;/span>&lt;span class="lnt">13
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pd&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Series&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2017&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">49&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)])&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:00:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
-&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pd&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Series&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2017&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">49&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>讓 LINE 以外部瀏覽器開啟超連結</title><link>https://blog.jyhsu.tw/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</guid><description>&lt;p>LINE 預設會以 in-app 的瀏覽器開啟超連結，但這種開啟方式卻容易使網頁的功能受限（排版崩壞、JS 無法正常運作等）&lt;br>
 若能以外部瀏覽器開啟超連結，該問題便能被克服。&lt;/p>
@@ -634,16 +641,16 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 針對我們需要讓使用者使用外部瀏覽器開啟的超連結
 加上 &lt;code>?openExternalBrowser=1&lt;/code> 參數即可&lt;/p>
 &lt;p>例如原本網址為&lt;/p>
-&lt;pre>&lt;code>https://wp.kid7.club/
+&lt;pre tabindex="0">&lt;code>https://wp.kid7.club/
 &lt;/code>&lt;/pre>&lt;p>加上參數，變為以下網址&lt;/p>
-&lt;pre>&lt;code>https://wp.kid7.club/?openExternalBrowser=1
+&lt;pre tabindex="0">&lt;code>https://wp.kid7.club/?openExternalBrowser=1
 &lt;/code>&lt;/pre>&lt;p>如此便能使在 LINE 中點擊網址的使用者直接以外部瀏覽器開啟超連結&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://developers.line.biz/media/partner-docs/LINE_BOT_Development_Guidelines.pdf" target="_blank" rel="noopener"
 >LINE BOT Development Guidelines&lt;/a> （P.52）&lt;/li>
-&lt;/ul></description></item><item><title>使用 SNMP 進行系統監控</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>&lt;h2 id="監控端">監控端&lt;/h2>
-&lt;p>使用 Docker 版，以簡化佈署複雜度&lt;/p>
+&lt;/ul></description></item><item><title>使用 SNMP 進行系統監控</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</link><pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-snmp-%E9%80%B2%E8%A1%8C%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/</guid><description>&lt;h2 id="監控端">監控端
+&lt;/h2>&lt;p>使用 Docker 版，以簡化佈署複雜度&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/setiseta/docker-librenms" target="_blank" rel="noopener"
 >https://github.com/setiseta/docker-librenms&lt;/a>&lt;/p>
 &lt;ol>
@@ -654,75 +661,75 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 &lt;li>進入修改帳號密碼（預設帳號/密碼：&lt;code>librenms&lt;/code>）&lt;/li>
 &lt;li>根據需求於 HTTP server 設定反向代理&lt;/li>
 &lt;/ol>
-&lt;h2 id="被監控端">被監控端&lt;/h2>
-&lt;p>安裝 snmpd 與 snmp（前者為服務本身，後者則包含 snmpwalk 等指令集）&lt;/p>
+&lt;h2 id="被監控端">被監控端
+&lt;/h2>&lt;p>安裝 snmpd 與 snmp（前者為服務本身，後者則包含 snmpwalk 等指令集）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo apt install snmpd snmp
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install snmpd snmp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>從本機測試連線&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">snmpwalk -v 2c -c public localhost
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">snmpwalk -v 2c -c public localhost
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>修改 &lt;code>/etc/snmp/snmpd.conf&lt;/code>&lt;/p>
 &lt;ul>
 &lt;li>修改 agentAddress，使其能從遠端被訪問（存取控制則由防火牆直接管理）
-&lt;pre>&lt;code class="language-conf" data-lang="conf"># 將
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"># 將
 agentAddress udp:127.0.0.1:161
 # 修改為
 agentAddress udp:161
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;li>修改資料收集範圍（參考 IDC 設定方式）
-&lt;pre>&lt;code class="language-conf" data-lang="conf"># 將
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"># 將
 view systemonly included .1.3.6.1.2.1.1
 view systemonly included .1.3.6.1.2.1.25.1
 # 修改為
 view systemonly included .1.3.6.1.
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;li>修改地理位置資訊
-&lt;pre>&lt;code class="language-conf" data-lang="conf">sysLocation IEE 201
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">sysLocation IEE 201
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;/ul>
 &lt;p>重新啟動 snmpd&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo systemctl restart snmpd.service
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl restart snmpd.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>調整防火牆設定，允許監控端連入&lt;br>
 （若需由本機 docker 連入，則允許 &lt;code>172.16.0.0/12&lt;/code> 連入 &lt;code>udp:161&lt;/code>）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo ufw allow from 172.16.0.0/12 to any port &lt;span class="m">161&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo ufw allow from 172.16.0.0/12 to any port &lt;span class="m">161&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="安裝插件">安裝插件&lt;/h2>
-&lt;p>&lt;a class="link" href="https://docs.librenms.org/Extensions/Applications/" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="安裝插件">安裝插件
+&lt;/h2>&lt;p>&lt;a class="link" href="https://docs.librenms.org/Extensions/Applications/" target="_blank" rel="noopener"
 >https://docs.librenms.org/Extensions/Applications/&lt;/a>&lt;/p>
 &lt;p>根據上述連結中的說明安裝 SNMP 插件，並於 LibreNMS 設定中開啟對應項目&lt;/p>
 &lt;p>部分插件（如 fail2ban）需要 sudo 權限，則須在 visudo 設定特權，並於 &lt;code>/etc/snmp/snmpd.conf&lt;/code> 設定使用 sudo 執行&lt;/p>
-&lt;pre>&lt;code class="language-conf" data-lang="conf">Debian-snmp ALL=(root) NOPASSWD: /etc/snmp/fail2ban
-&lt;/code>&lt;/pre>&lt;pre>&lt;code class="language-conf" data-lang="conf">extend fail2ban /usr/bin/sudo /etc/snmp/fail2ban
-&lt;/code>&lt;/pre>&lt;h2 id="常見問題">常見問題&lt;/h2>
-&lt;p>若 docker-compose 在 up 之後，持續無法連上資料庫，檢查 &lt;code>data/config/config.php&lt;/code> 是否確實有資料庫連線設定，若無則補上&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">Debian-snmp ALL=(root) NOPASSWD: /etc/snmp/fail2ban
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">extend fail2ban /usr/bin/sudo /etc/snmp/fail2ban
+&lt;/code>&lt;/pre>&lt;h2 id="常見問題">常見問題
+&lt;/h2>&lt;p>若 docker-compose 在 up 之後，持續無法連上資料庫，檢查 &lt;code>data/config/config.php&lt;/code> 是否確實有資料庫連線設定，若無則補上&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
@@ -733,94 +740,95 @@ view systemonly included .1.3.6.1.
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
-&lt;span class="c1">## Have a look in misc/config_definitions.json for examples of settings you can set here. DO NOT EDIT misc/config_definitions.json!
-&lt;/span>&lt;span class="c1">&lt;/span>
-&lt;span class="c1">### Database config
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_host&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;mysql&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_user&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;root&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_pass&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;pwd4librenms&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_name&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;librenms&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Have a look in misc/config_definitions.json for examples of settings you can set here. DO NOT EDIT misc/config_definitions.json!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### Database config
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_host&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;mysql&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_user&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;root&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_pass&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;pwd4librenms&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;db_name&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;librenms&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>若超連結路徑出現各種底線，將 &lt;code>data/config/config.php&lt;/code> 中以下段落解除註解&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;base_url&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;base_url&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>若無法採集 fail2ban 的資訊，直接執行出現以下訊息&lt;/p>
-&lt;pre>&lt;code>Can't locate JSON.pm in @INC (you may need to install the JSON module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at ./fail2ban line 80.
+&lt;pre tabindex="0">&lt;code>Can&amp;#39;t locate JSON.pm in @INC (you may need to install the JSON module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at ./fail2ban line 80.
 BEGIN failed--compilation aborted at ./fail2ban line 80.
 &lt;/code>&lt;/pre>&lt;p>需安裝 &lt;code>libjson-perl&lt;/code> 套件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo apt install libjson-perl
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install libjson-perl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>測試檔案讀寫速度</title><link>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%B8%AC%E8%A9%A6%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB%E9%80%9F%E5%BA%A6/</guid><description>&lt;p>可用於測試本機速度、NFS 速度等&lt;br>
 請先以 &lt;code>cd&lt;/code> 指令切換至欲測試的路徑&lt;/p>
-&lt;h2 id="測試檔案寫入速度">測試檔案寫入速度&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="測試檔案寫入速度">測試檔案寫入速度
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">time&lt;/span> dd &lt;span class="k">if&lt;/span>&lt;span class="o">=&lt;/span>/dev/zero &lt;span class="nv">of&lt;/span>&lt;span class="o">=&lt;/span>testfile &lt;span class="nv">bs&lt;/span>&lt;span class="o">=&lt;/span>16k &lt;span class="nv">count&lt;/span>&lt;span class="o">=&lt;/span>128k
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">time&lt;/span> dd &lt;span class="k">if&lt;/span>&lt;span class="o">=&lt;/span>/dev/zero &lt;span class="nv">of&lt;/span>&lt;span class="o">=&lt;/span>testfile &lt;span class="nv">bs&lt;/span>&lt;span class="o">=&lt;/span>16k &lt;span class="nv">count&lt;/span>&lt;span class="o">=&lt;/span>128k
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="測試檔案讀取速度">測試檔案讀取速度&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="測試檔案讀取速度">測試檔案讀取速度
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">time&lt;/span> dd &lt;span class="k">if&lt;/span>&lt;span class="o">=&lt;/span>testfile &lt;span class="nv">of&lt;/span>&lt;span class="o">=&lt;/span>/dev/null &lt;span class="nv">bs&lt;/span>&lt;span class="o">=&lt;/span>16k
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">time&lt;/span> dd &lt;span class="k">if&lt;/span>&lt;span class="o">=&lt;/span>testfile &lt;span class="nv">of&lt;/span>&lt;span class="o">=&lt;/span>/dev/null &lt;span class="nv">bs&lt;/span>&lt;span class="o">=&lt;/span>16k
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://serverfault.com/questions/324438/measure-benchmark-the-speed-latency-of-file-access-on-a-mounted-nfs-share/324489#324489" target="_blank" rel="noopener"
 >performance – Measure &amp;amp; benchmark the speed &amp;amp; latency of file access on a mounted NFS share – Server Fault&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>&lt;h2 id="帳號停用">帳號停用&lt;/h2>
-&lt;p>將帳號設定為昨天過期&lt;/p>
+&lt;/ul></description></item><item><title>Ubuntu 帳號停用與重新啟用</title><link>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-%E5%B8%B3%E8%99%9F%E5%81%9C%E7%94%A8%E8%88%87%E9%87%8D%E6%96%B0%E5%95%9F%E7%94%A8/</guid><description>&lt;h2 id="帳號停用">帳號停用
+&lt;/h2>&lt;p>將帳號設定為昨天過期&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo usermod -e &lt;span class="k">$(&lt;/span>date -d &lt;span class="s2">&amp;#34;yesterday&amp;#34;&lt;/span> +&lt;span class="s2">&amp;#34;%Y-%m-%d&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span> &amp;lt;user&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo usermod -e &lt;span class="k">$(&lt;/span>date -d &lt;span class="s2">&amp;#34;yesterday&amp;#34;&lt;/span> +&lt;span class="s2">&amp;#34;%Y-%m-%d&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span> &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>確認帳號期限&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo chage -l &amp;lt;user&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chage -l &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>封存家目錄&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> /home
-sudo tar -I pigz -p -cvf &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
-&lt;span class="c1"># 或以下&lt;/span>
-sudo tar czvfp &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /home
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar -I pigz -p -cvf &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 或以下&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar czvfp &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
 &lt;p>In addition, when doing a tar backup, it’s also good to add the following flags : p &amp;amp; (z/j)&lt;br>
@@ -832,57 +840,57 @@ sudo tar czvfp &amp;lt;name of archive&amp;gt;.tar.gz &amp;lt;username&amp;gt;
 &lt;p>將封存檔移往 NFS 封存區&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo rsync -avhP --remove-source-files &amp;lt;name of archive&amp;gt;.tar.gz /nfs/Backup/home_archive
-&lt;span class="c1"># 或以下&lt;/span>
-sudo mv &amp;lt;name of archive&amp;gt;.tar.gz /nfs/Backup/home_archive
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rsync -avhP --remove-source-files &amp;lt;name of archive&amp;gt;.tar.gz /nfs/Backup/home_archive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 或以下&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mv &amp;lt;name of archive&amp;gt;.tar.gz /nfs/Backup/home_archive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>移除家目錄&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo rm -rd /home/&amp;lt;user&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm -rd /home/&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="帳號重新啟用">帳號重新啟用&lt;/h2>
-&lt;p>重建家目錄&lt;/p>
+&lt;/div>&lt;h2 id="帳號重新啟用">帳號重新啟用
+&lt;/h2>&lt;p>重建家目錄&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> /home
-sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /home
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>重新啟用帳號&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo usermod -e &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &amp;lt;user&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo usermod -e &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>確認帳號期限&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo chage -l &amp;lt;user&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chage -l &amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://askubuntu.com/questions/282806/how-to-enable-or-disable-a-user" target="_blank" rel="noopener"
 >How to enable or disable a user? – Ask Ubuntu&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://unix.stackexchange.com/questions/80968/how-can-i-create-automatically-expiring-user-accounts" target="_blank" rel="noopener"
@@ -892,7 +900,7 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 &lt;/ul></description></item><item><title>Python 測試程式碼片段執行時間</title><link>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</link><pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/python-%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</guid><description>&lt;p>測試 Python 的程式碼片段實際執行所需秒數&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
@@ -901,20 +909,21 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 &lt;/span>&lt;span class="lnt">7
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">time&lt;/span>
-&lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">perf_counter&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="c1"># Do something&lt;/span>
-&lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">perf_counter&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="n">elapsed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>
-&lt;span class="k">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;elapsed:&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">elapsed&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">perf_counter&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Do something&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">perf_counter&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">elapsed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;elapsed:&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">elapsed&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://docs.python.org/3/library/time.html" target="_blank" rel="noopener"
 >time — Time access and conversions — Python 3 documentation&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>&lt;h2 id="前置處理">前置處理&lt;/h2>
-&lt;ul>
+&lt;/ul></description></item><item><title>使用 Telegram 接收 APC UPS 事件通知</title><link>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</link><pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E4%BD%BF%E7%94%A8-telegram-%E6%8E%A5%E6%94%B6-apc-ups-%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5/</guid><description>&lt;h2 id="前置處理">前置處理
+&lt;/h2>&lt;ul>
 &lt;li>已連接 APC UPS，並於機器中安裝 &lt;a class="link" href="http://www.apcupsd.org/" target="_blank" rel="noopener"
 >apcupsd&lt;/a>&lt;/li>
 &lt;li>向 &lt;a class="link" href="https://t.me/BotFather" target="_blank" rel="noopener"
@@ -923,11 +932,11 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 （以下以 &lt;a class="link" href="https://github.com/jyhsu2000/TelegramBotCli" target="_blank" rel="noopener"
 >TelegramBotCli&lt;/a> 為例）&lt;/li>
 &lt;/ul>
-&lt;h2 id="設定流程">設定流程&lt;/h2>
-&lt;ol>
+&lt;h2 id="設定流程">設定流程
+&lt;/h2>&lt;ol>
 &lt;li>
 &lt;p>確認已完成 apcupsd 的設定，並能透過已下指令順利存取 UPS 狀態&lt;/p>
-&lt;pre>&lt;code>apcaccess status
+&lt;pre tabindex="0">&lt;code>apcaccess status
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;li>
 &lt;p>在 Terminal 開著的情況下，測試 UPS 能否順利偵測事件並發送通知&lt;br>
@@ -944,7 +953,7 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 其中第 16 行管線後的部分，即為我們希望修改的訊息轉送動作&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
 &lt;/span>&lt;span class="lnt"> 3
 &lt;/span>&lt;span class="lnt"> 4
@@ -963,54 +972,55 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 &lt;/span>&lt;/span>&lt;span class="lnt">17
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="cp">#!/bin/sh
-&lt;/span>&lt;span class="cp">&lt;/span>&lt;span class="c1">#&lt;/span>
-&lt;span class="c1"># This shell script if placed in /etc/apcupsd&lt;/span>
-&lt;span class="c1"># will be called by /etc/apcupsd/apccontrol when the&lt;/span>
-&lt;span class="c1"># UPS goes back on to the mains after a power failure.&lt;/span>
-&lt;span class="c1"># We send an email message to root to notify him.&lt;/span>
-&lt;span class="c1">#&lt;/span>
-&lt;span class="nv">HOSTNAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>hostname&lt;span class="sb">`&lt;/span>
-&lt;span class="nv">MSG&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOSTNAME&lt;/span>&lt;span class="s2"> UPS &lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2"> Power has returned&amp;#34;&lt;/span>
-&lt;span class="c1">#&lt;/span>
-&lt;span class="o">(&lt;/span>
-&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>
-/sbin/apcaccess status
-&lt;span class="hl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nv">$APCUPSD_MAIL&lt;/span> -s &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="nv">$SYSADMIN&lt;/span>
-&lt;/span>&lt;span class="nb">exit&lt;/span> &lt;span class="m">0&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># This shell script if placed in /etc/apcupsd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># will be called by /etc/apcupsd/apccontrol when the&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># UPS goes back on to the mains after a power failure.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># We send an email message to root to notify him.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">HOSTNAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>hostname&lt;span class="sb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">MSG&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOSTNAME&lt;/span>&lt;span class="s2"> UPS &lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2"> Power has returned&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /sbin/apcaccess status
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nv">$APCUPSD_MAIL&lt;/span> -s &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="nv">$SYSADMIN&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">exit&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>我們希望將通知由預設的郵件通知改為 Telegram Bot 通知，因此需要修改管線後的部分&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">16
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">16
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nv">$APCUPSD_MAIL&lt;/span> -s &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="nv">$SYSADMIN&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nv">$APCUPSD_MAIL&lt;/span> -s &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$MSG&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="nv">$SYSADMIN&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>將其改為發送通知的指令，如：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">16
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">16
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> xargs -0 python3 /home/jyhsu/TelegramBotCli/sendMessage.py
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> xargs -0 python3 /home/jyhsu/TelegramBotCli/sendMessage.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>重新啟動 apcupsd 服務&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">sudo systemctl restart apcupsd.service
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">sudo systemctl restart apcupsd.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
@@ -1018,161 +1028,137 @@ sudo tar xzvf &amp;lt;name of archive&amp;gt;.tar.gz
 &lt;del>（再拔一次插頭）&lt;/del>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="http://www.apcupsd.org/manual/" target="_blank" rel="noopener"
 >APCUPSD User Manual&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://blog.sean.taipei/2017/05/telegram-bot" target="_blank" rel="noopener"
 >從零開始的 Telegram Bot | Sean’s Note&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;ol>
+&lt;/ul></description></item><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>&lt;h2 id="安裝">安裝
+&lt;/h2>&lt;ol>
 &lt;li>
 &lt;p>安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）&lt;br>
 &lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="noopener"
 >https://github.com/squizlabs/PHP_CodeSniffer&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">composer global require &lt;span class="s2">&amp;#34;squizlabs/php_codesniffer=*&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">composer global require &lt;span class="s2">&amp;#34;squizlabs/php_codesniffer=*&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>確認指令可用&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">phpcs --version
-phpcbf --version
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">phpcs --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpcbf --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;/ol>
-&lt;h2 id="使用-phpcs">使用 phpcs&lt;/h2>
-&lt;p>檢查錯誤&lt;/p>
-&lt;pre>&lt;code class="language-basah" data-lang="basah">phpcs &amp;lt;檔案/資料夾&amp;gt;
+&lt;h2 id="使用-phpcs">使用 phpcs
+&lt;/h2>&lt;p>檢查錯誤&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-basah" data-lang="basah">phpcs &amp;lt;檔案/資料夾&amp;gt;
 &lt;/code>&lt;/pre>&lt;p>自動修正錯誤&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">phpcbf &amp;lt;檔案/資料夾&amp;gt;
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">phpcbf &amp;lt;檔案/資料夾&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="自訂驗證標準">自訂驗證標準&lt;/h2>
-&lt;p>使用 phpcs 時，可自訂驗證使用標準（如：PSR-2，或&lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="自訂驗證標準">自訂驗證標準
+&lt;/h2>&lt;p>使用 phpcs 時，可自訂驗證使用標準（如：PSR-2，或&lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset" target="_blank" rel="noopener"
 >自己撰寫的定義檔&lt;/a>等）
 若未指定，將預設嘗試抓取 &lt;code>phpcs.xml&lt;/code> 作為標準&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">phpcs --standard&lt;span class="o">=&lt;/span>PSR2
-phpcs --standard&lt;span class="o">=&lt;/span>/path/to/custom_ruleset.xml
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">phpcs --standard&lt;span class="o">=&lt;/span>PSR2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpcs --standard&lt;span class="o">=&lt;/span>/path/to/custom_ruleset.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="於-phpstorm-使用-phpcs">於 PhpStorm 使用 phpcs&lt;/h2>
-&lt;p>設定 Code Sniffier&lt;br>
+&lt;/div>&lt;h2 id="於-phpstorm-使用-phpcs">於 PhpStorm 使用 phpcs
+&lt;/h2>&lt;p>設定 Code Sniffier&lt;br>
 &lt;code>Settings&lt;/code> → &lt;code>Languages &amp;amp; Frameworks&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>Code Sniffier&lt;/code>
 Configuration 設定為 Local，點擊右側「…」&lt;br>
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 272;
-flex-basis: 654px"
->
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png" data-size="763x280">
 &lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png"
 width="763"
 height="280"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_2.png 1024w"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_3.png 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="272"
+data-flex-basis="654px"
+>&lt;/p>
 &lt;p>PHP Code Sniffier path 設定為「phpcs.bat」（無須指定路徑），點擊 &lt;code>Validate&lt;/code> 進行驗證，確認抓到全域 &lt;code>phpcs&lt;/code> 指令&lt;br>
 Path to phpcbf 填入任意字串，只要不是空白的，PhpStorm 就會自動去抓全域的 &lt;code>phpcbf&lt;/code>&lt;br>
 （這種設定方式會使得無法使用 &lt;code>Validate&lt;/code> 進行驗證，但不影響使用）&lt;br>
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 446;
-flex-basis: 1071px"
->
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png" data-size="826x185">
 &lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png"
 width="826"
 height="185"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_2.png 1024w"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_3.png 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="446"
+data-flex-basis="1071px"
+>&lt;/p>
 &lt;p>&lt;code>Settings&lt;/code> → &lt;code>Editor&lt;/code> → &lt;code>Inspections&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>PHP Code Sniffier validation&lt;/code>&lt;br>
 勾選後即可啟用，亦可指定驗證標準&lt;br>
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 173;
-flex-basis: 415px"
->
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png" data-size="1217x703">
 &lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png"
 width="1217"
 height="703"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_2.png 1024w"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_3.png 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="173"
+data-flex-basis="415px"
+>&lt;/p>
 &lt;p>將 &lt;code>Coding standard&lt;/code> 指定為 &lt;code>Custom&lt;/code>&lt;br>
 並點擊「…」將 &lt;code>Path to ruleset&lt;/code> 指向專案資料夾的 &lt;code>phpcs.xml&lt;/code>&lt;br>
 （PhpStorm 不會自動去使用該檔案作為標準，須自行指定）
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 212;
-flex-basis: 509px"
->
-&lt;a href="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png" data-size="630x297">
 &lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png"
 width="630"
 height="297"
-srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_2.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_2.png 1024w"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_3.png 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="212"
+data-flex-basis="509px"
+>&lt;/p>
 &lt;p>完成後，PhpStorm 便會依自己提供的 phpcs.xml 對專案中的程式碼進行驗證&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="noopener"
 >https://github.com/squizlabs/PHP_CodeSniffer&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://www.jetbrains.com/help/phpstorm/using-php-code-sniffer.html" target="_blank" rel="noopener"
 >PHP Code Sniffer – Help | PhpStorm&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://ithelp.ithome.com.tw/articles/10195490" target="_blank" rel="noopener"
 >調整程式碼風格（Coding Style）&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程&lt;/h2>
-&lt;ol>
+&lt;/ul></description></item><item><title>Anaconda 安裝筆記</title><link>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/anaconda-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程
+&lt;/h2>&lt;ol>
 &lt;li>
 &lt;p>下載 Anaconda&lt;br>
 &lt;a class="link" href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener"
 >https://www.anaconda.com/distribution/&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
@@ -1181,37 +1167,37 @@ loading="lazy"
 不使用 Conda init 初始化&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo bash ./Anaconda3-2019.07-Linux-x86_64.sh
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo bash ./Anaconda3-2019.07-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>建立 Anaconda 使用者&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo useradd anaconda
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo useradd anaconda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>設定資料夾權限&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo chown -R anaconda:anaconda /opt/anaconda
-sudo chmod -R go-w /opt/anaconda
-sudo chmod -R go+rX /opt/anaconda
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chown -R anaconda:anaconda /opt/anaconda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod -R go-w /opt/anaconda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod -R go+rX /opt/anaconda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
@@ -1224,52 +1210,52 @@ sudo chmod -R go+rX /opt/anaconda
 （設定 PATH 給 sudo 比較麻煩，可使用下方方式呼叫，或 sudo -i 進 root 之後使用 conda）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo &lt;span class="k">$(&lt;/span>which conda&lt;span class="k">)&lt;/span> update -n base -c defaults conda
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="k">$(&lt;/span>which conda&lt;span class="k">)&lt;/span> update -n base -c defaults conda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>初始化 conda&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># 初始化給 Bash&lt;/span>
-conda init
-&lt;span class="c1"># 初始化給 Zsh&lt;/span>
-conda init zsh
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化給 Bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化給 Zsh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda init zsh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>關閉登入自動 activate&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">conda config --set auto_activate_base &lt;span class="nb">false&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">conda config --set auto_activate_base &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;/ol>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://medium.com/@pjptech/installing-anaconda-for-multiple-users-650b2a6666c6" target="_blank" rel="noopener"
 >Installing Anaconda for multiple users – Peter Roche – Medium&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://ithelp.ithome.com.tw/articles/10192460" target="_blank" rel="noopener"
 >[Day01]Anaconda環境安裝！ – iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default" target="_blank" rel="noopener"
 >bash – How do I prevent Conda from activating the base environment by default? – Stack Overflow&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程&lt;/h2>
-&lt;ol>
+&lt;/ul></description></item><item><title>Ubuntu 16.04/CUDA 10.0 安裝筆記</title><link>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</link><pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/ubuntu-16.04-cuda-10.0-%E5%AE%89%E8%A3%9D%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="流程">流程
+&lt;/h2>&lt;ol>
 &lt;li>
 &lt;p>安裝 NVIDIA 顯卡驅動與相關套件&lt;br>
 &lt;a class="link" href="https://www.tensorflow.org/install/gpu#ubuntu_1604_cuda_10" target="_blank" rel="noopener"
@@ -1282,58 +1268,58 @@ conda init zsh
 &lt;p>測試&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">nvidia-smi
-nvcc -V
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nvidia-smi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvcc -V
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>編譯測試工具，並進行測試&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> /usr/local/cuda-10.0/samples
-sudo make
-&lt;span class="nb">cd&lt;/span> bin/x86_64/linux/release
-sudo ./deviceQuery
-sudo ./bandwidthTest
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /usr/local/cuda-10.0/samples
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> bin/x86_64/linux/release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./deviceQuery
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./bandwidthTest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>安裝 tensorflow-gpu&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pip3 install tensorflow-gpu
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pip3 install tensorflow-gpu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>測試 tensorflow 能否抓到 GPU&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">python3
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">python3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
@@ -1342,28 +1328,30 @@ sudo ./bandwidthTest
 &lt;/span>&lt;span class="lnt">7
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tensorflow.python.client&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">device_lib&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">get_available_gpus&lt;/span>&lt;span class="p">():&lt;/span>
-&lt;span class="n">local_device_protos&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">device_lib&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">list_local_devices&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">device_type&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;GPU&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;span class="n">get_available_gpus&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">tensorflow.python.client&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">device_lib&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">get_available_gpus&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">device_lib&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">list_local_devices&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">local_device_protos&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">device_type&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;GPU&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">get_available_gpus&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>
 &lt;p>若想防止未來誤更新，可使用 apt-mark 將套件 hold 住&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">sudo apt-mark hold nvidia-418 cuda-10-0 libcudnn7 libcudnn7-dev
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-mark hold nvidia-418 cuda-10-0 libcudnn7 libcudnn7-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;/ol>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener"
 >GPU support | TensorFlow&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/38559755/how-to-get-current-available-gpus-in-tensorflow/38580201#38580201" target="_blank" rel="noopener"
@@ -1395,11 +1383,11 @@ sudo ./bandwidthTest
 現已不建議使用 pear 安裝，建議直接使用 Composer 安裝全域套件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">composer global require &lt;span class="s2">&amp;#34;squizlabs/php_codesniffer=*&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">composer global require &lt;span class="s2">&amp;#34;squizlabs/php_codesniffer=*&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
 &lt;p>使用 XAMPP 時，&lt;br>
@@ -1408,47 +1396,47 @@ sudo ./bandwidthTest
 一般會使用 PEAR 的安裝方案&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">pear install PHP_CodeSniffer
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pear install PHP_CodeSniffer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>但很可能出現以下錯誤&lt;/p>
-&lt;pre>&lt;code>Cannot use result of built-in function in write context in D:\xampp\php\pear\Archive\Tar.php on line 639
+&lt;pre tabindex="0">&lt;code>Cannot use result of built-in function in write context in D:\xampp\php\pear\Archive\Tar.php on line 639
 &lt;/code>&lt;/pre>&lt;p>解決方案：&lt;/p>
 &lt;ol>
 &lt;li>進入檔案，將該行由
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="nv">$v_att_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="nx">func_get_args&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$v_att_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="nx">func_get_args&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>改為&lt;/p>
+&lt;/div>改為
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="nv">$v_att_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">func_get_args&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$v_att_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">func_get_args&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>重新安裝 Archive_Tar
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">pear install Archive_Tar
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pear install Archive_Tar
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;li>重新安裝 PHP_CodeSniffer
-&lt;pre>&lt;code>pear install PHP_CodeSniffer
+&lt;pre tabindex="0">&lt;code>pear install PHP_CodeSniffer
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;/ol></description></item><item><title>Spigot 使用 Flyway 踩雷分享</title><link>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/spigot-%E4%BD%BF%E7%94%A8-flyway-%E8%B8%A9%E9%9B%B7%E5%88%86%E4%BA%AB/</guid><description>&lt;p>&lt;a class="link" href="https://flywaydb.org/" target="_blank" rel="noopener"
 >Flyway&lt;/a> 是一款資料庫版本控管的解決方案，&lt;br>
@@ -1461,50 +1449,51 @@ sudo ./bandwidthTest
 &lt;hr>
 &lt;p>在這次撰寫的 Spigot 插件中，打算暫且先以 SQLite 作為資料庫&lt;br>
 於是先安裝了 Flyway 與 SQLite-JDBC&lt;/p>
-&lt;pre>&lt;code>compile 'org.flywaydb:flyway-core:5.2.4'
-compile 'org.xerial:sqlite-jdbc:3.23.1'
+&lt;pre tabindex="0">&lt;code>compile &amp;#39;org.flywaydb:flyway-core:5.2.4&amp;#39;
+compile &amp;#39;org.xerial:sqlite-jdbc:3.23.1&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>設定 Flyway&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">String&lt;/span> &lt;span class="n">configFolder&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">plugin&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getDataFolder&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">getAbsolutePath&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">String&lt;/span> &lt;span class="n">dbUrl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;jdbc:sqlite:&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">configFolder&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;/database.db&amp;#34;&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">Flyway&lt;/span> &lt;span class="n">flyway&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Flyway&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">configure&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">dataSource&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">).&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">flyway&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">migrate&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">configFolder&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">plugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getDataFolder&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">getAbsolutePath&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;jdbc:sqlite:&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">configFolder&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;/database.db&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flyway&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">configure&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">dataSource&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">flyway&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">migrate&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然後他就爆炸了ლ(ﾟдﾟლ)&lt;/p>
 &lt;hr>
 &lt;p>遇到的第一個問題：&lt;/p>
-&lt;pre>&lt;code>FlywayException: Unable to instantiate class org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator
+&lt;pre tabindex="0">&lt;code>FlywayException: Unable to instantiate class org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator
 &lt;/code>&lt;/pre>&lt;p>解決方案：自行指令 LogCreator&lt;br>
 &lt;a class="link" href="https://github.com/flyway/flyway/issues/506" target="_blank" rel="noopener"
 >https://github.com/flyway/flyway/issues/506&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">LogFactory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">setLogCreator&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">Slf4jLogCreator&lt;/span>&lt;span class="o">());&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">LogFactory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setLogCreator&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Slf4jLogCreator&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>遇到的第二個問題：&lt;/p>
-&lt;pre>&lt;code>Unable to resolve location classpath:db/migration
+&lt;pre tabindex="0">&lt;code>Unable to resolve location classpath:db/migration
 &lt;/code>&lt;/pre>&lt;p>解決方案：自行指定 ClassLoader&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Flyway&lt;/span> &lt;span class="n">flyway&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Flyway&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">configure&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">getClass&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">getClassLoader&lt;/span>&lt;span class="o">()).&lt;/span>&lt;span class="na">dataSource&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">).&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">flyway&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flyway&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">configure&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">getClass&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">getClassLoader&lt;/span>&lt;span class="p">()).&lt;/span>&lt;span class="na">dataSource&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dbUrl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
 &lt;p>就這樣，花了半天解決這些問題&lt;br>
-還不錯用，就是資料難找了點…&lt;/p></description></item></channel></rss>
+還不錯用，就是資料難找了點…&lt;/p></description></item><item><title>彙整</title><link>https://blog.jyhsu.tw/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/archives/</guid><description/></item><item><title>搜尋</title><link>https://blog.jyhsu.tw/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/search/</guid><description/></item></channel></rss>

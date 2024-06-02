@@ -1,1 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>資料處理 on KID's Blog</title><link>https://blog.jyhsu.tw/tags/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86/</link><description>Recent content in 資料處理 on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/tags/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>資料處理時，常需要將時間轉換為接近的整點， 如：9:47 轉換為 10:00；14:03 轉換為 14:00 或是以 15 分鐘為區間， 如：9:47 轉換為 9:45、5</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>資料處理 on KID's Blog</title><link>https://blog.jyhsu.tw/tags/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86/</link><description>Recent content in 資料處理 on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/tags/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>時間的四捨五入（R、Python Pandas）</title><link>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</link><pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E6%99%82%E9%96%93%E7%9A%84%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5-r-python-pandas/</guid><description>&lt;p>資料處理時，常需要將時間轉換為接近的整點，&lt;br>
+如：9:47 轉換為 10:00；14:03 轉換為 14:00&lt;/p>
+&lt;p>或是以 15 分鐘為區間，&lt;br>
+如：9:47 轉換為 9:45、5:23 轉換為 5:30&lt;/p>
+&lt;p>以下分別介紹 R 與 Python 兩種語言的處理方式&lt;/p>
+&lt;h2 id="r">R
+&lt;/h2>&lt;p>使用 &lt;a class="link" href="https://www.rdocumentation.org/packages/lubridate" target="_blank" rel="noopener"
+>lubridate&lt;/a> 套件中的 &lt;code>round_date&lt;/code>（四捨五入）、&lt;code>floor_date&lt;/code>（向下取整）、&lt;code>ceiling_date&lt;/code>（向上取整）&lt;br>
+三者皆可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-R" data-lang="R">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">as.POSIXct&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2017-10-11 09:49:03&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">round_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">floor_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;5 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;10 minute&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lubridate&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">ceiling_date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hour&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="python">Python
+&lt;/h2>&lt;p>Python 本身較難處理這類情況，因此會使用 &lt;a class="link" href="https://pandas.pydata.org/" target="_blank" rel="noopener"
+>Pandas&lt;/a> 套件中 &lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.html" target="_blank" rel="noopener"
+>pandas.Series.dt&lt;/a> accessor，使用其 &lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.round.html" target="_blank" rel="noopener"
+>&lt;code>round&lt;/code>&lt;/a>（四捨五入）、&lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.floor.html" target="_blank" rel="noopener"
+>&lt;code>floor&lt;/code>&lt;/a>（向下取整）、&lt;a class="link" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.ceil.html" target="_blank" rel="noopener"
+>&lt;code>ceil&lt;/code>&lt;/a>（向上取整）
+亦可依照需求指定時間精度，以下範例分別以 5 分鐘、10 分鐘、1 小時取接近值&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pd&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Series&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2017&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">49&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:45:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:40:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;5 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;10 min&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 09:50:00&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1 h&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 2017-10-11 10:00:00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

@@ -1,1 +1,195 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PHP on KID's Blog</title><link>https://blog.jyhsu.tw/categories/php/</link><description>Recent content in PHP on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/php/index.xml" rel="self" type="application/rss+xml"/><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>安裝 安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝） https://github.com/squizlabs/PHP_CodeSniffer 1 composer global require &amp;#34;squizlabs/php_codesniffer=*&amp;#34; 確認指令可用 1 2 phpcs --version phpcbf --version 使用 phpcs 檢查錯誤 phpcs &amp;lt;檔案/資料夾&amp;gt; 自動修正錯誤 1 phpcbf &amp;lt;檔案</description></item><item><title>在 Windows 的 XAMPP 安裝 Imagick 擴充套件</title><link>https://blog.jyhsu.tw/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</link><pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</guid><description>檢視 XAMPP 的 phpinfo()，確認以下項目 Architecture：x86 / x64 Thread Safety：enabled / disabled Compiler：如 MSVC15 (Visual C++ 2017) 到</description></item><item><title>XAMPP 安裝 PHP_CodeSniffer</title><link>https://blog.jyhsu.tw/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</guid><description>2019-10-06 更新： 此篇為舊筆記 現已不建議使用 pear 安裝，建議直接使用 Composer 安裝全域套件 1 composer global require &amp;#34;squizlabs/php_codesniffer=*&amp;#34; 使用 XAMPP 時， 若需安裝 PHP_CodeSniffer， 一般會使用 PEAR</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PHP on KID's Blog</title><link>https://blog.jyhsu.tw/categories/php/</link><description>Recent content in PHP on KID's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jyhsu.tw/categories/php/index.xml" rel="self" type="application/rss+xml"/><item><title>PhpStorm 使用 PHP Code Sniffier</title><link>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/</guid><description>&lt;h2 id="安裝">安裝
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>安裝 PHP_CodeSniffer （推薦使用 Composer 進行安裝）&lt;br>
+&lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="noopener"
+>https://github.com/squizlabs/PHP_CodeSniffer&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">composer global require &lt;span class="s2">&amp;#34;squizlabs/php_codesniffer=*&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>確認指令可用&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">phpcs --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpcbf --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="使用-phpcs">使用 phpcs
+&lt;/h2>&lt;p>檢查錯誤&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-basah" data-lang="basah">phpcs &amp;lt;檔案/資料夾&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>自動修正錯誤&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">phpcbf &amp;lt;檔案/資料夾&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="自訂驗證標準">自訂驗證標準
+&lt;/h2>&lt;p>使用 phpcs 時，可自訂驗證使用標準（如：PSR-2，或&lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset" target="_blank" rel="noopener"
+>自己撰寫的定義檔&lt;/a>等）
+若未指定，將預設嘗試抓取 &lt;code>phpcs.xml&lt;/code> 作為標準&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">phpcs --standard&lt;span class="o">=&lt;/span>PSR2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpcs --standard&lt;span class="o">=&lt;/span>/path/to/custom_ruleset.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="於-phpstorm-使用-phpcs">於 PhpStorm 使用 phpcs
+&lt;/h2>&lt;p>設定 Code Sniffier&lt;br>
+&lt;code>Settings&lt;/code> → &lt;code>Languages &amp;amp; Frameworks&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>Code Sniffier&lt;/code>
+Configuration 設定為 Local，點擊右側「…」&lt;br>
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image.png"
+width="763"
+height="280"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image_hub4ffab357c5ed9f19709c8b931320399_21749_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="272"
+data-flex-basis="654px"
+>&lt;/p>
+&lt;p>PHP Code Sniffier path 設定為「phpcs.bat」（無須指定路徑），點擊 &lt;code>Validate&lt;/code> 進行驗證，確認抓到全域 &lt;code>phpcs&lt;/code> 指令&lt;br>
+Path to phpcbf 填入任意字串，只要不是空白的，PhpStorm 就會自動去抓全域的 &lt;code>phpcbf&lt;/code>&lt;br>
+（這種設定方式會使得無法使用 &lt;code>Validate&lt;/code> 進行驗證，但不影響使用）&lt;br>
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1.png"
+width="826"
+height="185"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-1_hu51da3c858ba06f037519562346e04dee_13915_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="446"
+data-flex-basis="1071px"
+>&lt;/p>
+&lt;p>&lt;code>Settings&lt;/code> → &lt;code>Editor&lt;/code> → &lt;code>Inspections&lt;/code> → &lt;code>PHP&lt;/code> → &lt;code>Quality Tools&lt;/code> → &lt;code>PHP Code Sniffier validation&lt;/code>&lt;br>
+勾選後即可啟用，亦可指定驗證標準&lt;br>
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2.png"
+width="1217"
+height="703"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-2_hu21897b6e62caa419840f5c1cb70259e4_106369_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="173"
+data-flex-basis="415px"
+>&lt;/p>
+&lt;p>將 &lt;code>Coding standard&lt;/code> 指定為 &lt;code>Custom&lt;/code>&lt;br>
+並點擊「…」將 &lt;code>Path to ruleset&lt;/code> 指向專案資料夾的 &lt;code>phpcs.xml&lt;/code>&lt;br>
+（PhpStorm 不會自動去使用該檔案作為標準，須自行指定）
+&lt;img src="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3.png"
+width="630"
+height="297"
+srcset="https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_480x0_resize_box_3.png 480w, https://blog.jyhsu.tw/p/phpstorm-%E4%BD%BF%E7%94%A8-php-code-sniffier/image-3_hu56ad09312a3fe6ada9c653e4c87c262a_24328_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="212"
+data-flex-basis="509px"
+>&lt;/p>
+&lt;p>完成後，PhpStorm 便會依自己提供的 phpcs.xml 對專案中的程式碼進行驗證&lt;/p>
+&lt;h2 id="參考資料">參考資料
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="noopener"
+>https://github.com/squizlabs/PHP_CodeSniffer&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.jetbrains.com/help/phpstorm/using-php-code-sniffer.html" target="_blank" rel="noopener"
+>PHP Code Sniffer – Help | PhpStorm&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://ithelp.ithome.com.tw/articles/10195490" target="_blank" rel="noopener"
+>調整程式碼風格（Coding Style）&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>在 Windows 的 XAMPP 安裝 Imagick 擴充套件</title><link>https://blog.jyhsu.tw/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</link><pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E5%9C%A8-windows-%E7%9A%84-xampp-%E5%AE%89%E8%A3%9D-imagick-%E6%93%B4%E5%85%85%E5%A5%97%E4%BB%B6/</guid><description>&lt;ol>
+&lt;li>檢視 XAMPP 的 phpinfo()，確認以下項目
+&lt;ul>
+&lt;li>Architecture：x86 / x64&lt;/li>
+&lt;li>Thread Safety：enabled / disabled&lt;/li>
+&lt;li>Compiler：如 MSVC15 (Visual C++ 2017)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>到 &lt;a class="link" href="https://windows.php.net/downloads/pecl/deps/" target="_blank" rel="noopener"
+>PECL Deps&lt;/a> 查看對應以上 Architecture 與 Compiler 對應的 ImageMagick 版本
+&lt;ul>
+&lt;li>如 &lt;code>ImageMagick-7.0.7-11-vc15-x64.zip&lt;/code> 則為 &lt;code>7.0.7&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>根據以下文章進行安裝，唯各步驟須注意使用上述版本
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows" target="_blank" rel="noopener"
+>How to install and enable the Imagick extension in XAMPP for Windows&lt;/a>&lt;/li>
+&lt;li>若第一步驟找不到對應版本的 ImageMagick，可到&lt;a class="link" href="http://ftp.icm.edu.pl/packages/ImageMagick/binaries/" target="_blank" rel="noopener"
+>這裡&lt;/a>下載&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol></description></item><item><title>XAMPP 安裝 PHP_CodeSniffer</title><link>https://blog.jyhsu.tw/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/xampp-%E5%AE%89%E8%A3%9D-php_codesniffer/</guid><description>&lt;p>&lt;strong>2019-10-06 更新：&lt;/strong>&lt;br>
+此篇為舊筆記&lt;br>
+現已不建議使用 pear 安裝，建議直接使用 Composer 安裝全域套件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">composer global require &lt;span class="s2">&amp;#34;squizlabs/php_codesniffer=*&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>使用 XAMPP 時，&lt;br>
+若需安裝 &lt;a class="link" href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="noopener"
+>PHP_CodeSniffer&lt;/a>，&lt;br>
+一般會使用 PEAR 的安裝方案&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pear install PHP_CodeSniffer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但很可能出現以下錯誤&lt;/p>
+&lt;pre tabindex="0">&lt;code>Cannot use result of built-in function in write context in D:\xampp\php\pear\Archive\Tar.php on line 639
+&lt;/code>&lt;/pre>&lt;p>解決方案：&lt;/p>
+&lt;ol>
+&lt;li>進入檔案，將該行由
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$v_att_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="nx">func_get_args&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>改為
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$v_att_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">func_get_args&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>重新安裝 Archive_Tar
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pear install Archive_Tar
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>重新安裝 PHP_CodeSniffer
+&lt;pre tabindex="0">&lt;code>pear install PHP_CodeSniffer
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ol></description></item></channel></rss>
