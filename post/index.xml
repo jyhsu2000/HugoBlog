@@ -637,8 +637,8 @@ Workflow 使用 &lt;a class="link" href="https://github.com/peaceiris/actions-hu
 &lt;/div></description></item><item><title>讓 LINE 以外部瀏覽器開啟超連結</title><link>https://blog.jyhsu.tw/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.jyhsu.tw/p/%E8%AE%93-line-%E4%BB%A5%E5%A4%96%E9%83%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%8B%E5%95%9F%E8%B6%85%E9%80%A3%E7%B5%90/</guid><description>&lt;p>LINE 預設會以 in-app 的瀏覽器開啟超連結，但這種開啟方式卻容易使網頁的功能受限（排版崩壞、JS 無法正常運作等）&lt;br>
 若能以外部瀏覽器開啟超連結，該問題便能被克服。&lt;/p>
 &lt;p>&lt;strong>註：以下方法不僅限於使用訊息傳送的網址，透過 LINE 掃描的 QR 碼中所帶的網址亦有相同效果&lt;/strong>&lt;/p>
-&lt;p>其實應對方式很簡單
-針對我們需要讓使用者使用外部瀏覽器開啟的超連結
+&lt;p>其實應對方式很簡單&lt;br>
+針對我們需要讓使用者使用外部瀏覽器開啟的超連結&lt;br>
 加上 &lt;code>?openExternalBrowser=1&lt;/code> 參數即可&lt;/p>
 &lt;p>例如原本網址為&lt;/p>
 &lt;pre tabindex="0">&lt;code>https://wp.kid7.club/
