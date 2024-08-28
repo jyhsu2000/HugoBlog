@@ -47,7 +47,7 @@ flyway.migrate();
 FlywayException: Unable to instantiate class org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator
 ```
 
-解決方案：自行指令 LogCreator  
+解決方案：自行指定 LogCreator  
 [https://github.com/flyway/flyway/issues/506](https://github.com/flyway/flyway/issues/506)
 
 ```java
